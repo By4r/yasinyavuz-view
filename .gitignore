@@ -1,0 +1,19 @@
+# OS
+.DS_Store
+
+# Working docs — internal, never committed
+tasks/
+docs/screenshots/
+
+# Scratch
+scratch/
+scratchpad/
+*.tmp
+
+# Claude config — ignore everything except the committed handoff skill
+.claude/*
+!.claude/skills/
+.claude/skills/*
+!.claude/skills/handoff/
+
+# NOTE: assets/brief-media/ is INTENTIONALLY tracked (committed).
