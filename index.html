@@ -51,38 +51,92 @@
   <main id="main">
     <span id="top"></span>
 
-    <!-- ============ HERO ============ -->
+    <!-- ============ HERO (brief §6: portre SOL + sağda öne çıkan haber/proje slider) ============ -->
     <section class="hero band-ink" aria-label="Tanıtım" style="--hero-img:url('assets/img/hero-slider.webp'); --portrait-img:url('assets/img/portrait.webp')">
       <div class="hero__bg" aria-hidden="true"></div>
       <div class="container hero__inner">
-        <div class="hero__grid">
-          <div class="hero__content">
-            <div class="hero__rule" aria-hidden="true"></div>
-            <p class="eyebrow">Girişimci · Proje Yöneticisi · İletişimci</p>
-            <h1 class="hero__title">Yasin Yavuz</h1>
-            <p class="serif" style="font-size:var(--fs-h3);color:var(--copper-300);font-weight:var(--w-med);margin-top:var(--sp-2);min-height:2.6em;line-height:1.32">
-              <span class="rot" id="heroRot" aria-live="polite">Girişimcilik, Dijital Projeler ve Sosyal Etki Odaklı Bir Yolculuk</span>
-            </p>
-            <p class="hero__lead">Dijital dönüşüm, sosyal sorumluluk ve yapay zekâ alanlarında projeler üreten; iş dünyası, sivil toplum ve medyayı tek çatı altında buluşturan bir profil.</p>
+
+        <!-- Kimlik başlığı: ad + 4 dönen başlık varyantı (korundu) -->
+        <div class="hero__head">
+          <div class="hero__rule" aria-hidden="true"></div>
+          <p class="eyebrow">Girişimci · Proje Yöneticisi · İletişimci</p>
+          <h1 class="hero__title">Yasin Yavuz</h1>
+          <p class="hero__rot serif">
+            <span class="rot" id="heroRot" aria-live="polite">Girişimcilik, Dijital Projeler ve Sosyal Etki Odaklı Bir Yolculuk</span>
+          </p>
+          <p class="hero__lead">Dijital dönüşüm, sosyal sorumluluk ve yapay zekâ alanlarında projeler üreten; iş dünyası, sivil toplum ve medyayı tek çatı altında buluşturan bir profil.</p>
+          <div class="hero__actions">
             <div class="hero__cta">
               <a class="btn btn--primary" href="#projeler">Projeleri Gör <span aria-hidden="true">→</span></a>
               <a class="btn btn--ghost" href="#hakkinda">Hakkında</a>
             </div>
+            <!-- Ana sayfada kısa sosyal blok (§13). TikTok & YouTube canlı kaynakta YOK → eklenmedi, SORULACAK. -->
+            <div class="hero__social" aria-label="Sosyal medyada takip edin">
+              <span class="hero__social-label">Takip edin</span>
+              <a class="social-btn social-btn--sm" href="https://facebook.com/yasinyavuz91" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2c0-.6.4-1 1-1Z"/></svg></a>
+              <a class="social-btn social-btn--sm" href="https://instagram.com/yasinyavuz91" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              <a class="social-btn social-btn--sm" href="https://x.com/yasinyavuz91" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3l-7 8 8.2 10h-6.4l-4.3-5.6L5.4 21H2.4l7.5-8.6L2 3h6.6l3.9 5.2L17.5 3Zm-1.1 16h1.7L7.7 4.8H5.9L16.4 19Z"/></svg></a>
+              <a class="social-btn social-btn--sm" href="https://www.linkedin.com/in/yasinyavuz91/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 8.5v10H3.5v-10h3ZM5 3.5A1.75 1.75 0 1 1 5 7a1.75 1.75 0 0 1 0-3.5ZM20.5 18.5h-3v-5.3c0-1.3-.5-2.1-1.6-2.1-.9 0-1.4.6-1.6 1.2-.1.2-.1.5-.1.8v5.4h-3s.04-9.1 0-10h3v1.4c.4-.6 1.1-1.5 2.8-1.5 2 0 3.5 1.3 3.5 4.2v5.9Z"/></svg></a>
+            </div>
           </div>
+        </div>
 
+        <!-- Portre SOL + öne çıkan haber/proje slider SAĞ -->
+        <div class="hero__grid">
           <div class="hero__portrait" role="img" aria-label="Yasin Yavuz portresi">
             <div class="hero__badge">
               <div class="role">Sivil Toplum</div>
               <div class="who">DESİL Kurucu Başkanı</div>
             </div>
           </div>
-        </div>
 
-        <!-- Öne çıkan güncel içerik (brief §6: sağda öne çıkan haber) -->
-        <div class="hero__ticker">
-          <span class="tag">Son Gündem</span>
-          <a class="tick-link tick-title" href="https://yasinyavuz.com.tr/medya/caykarasporun-40-yil-vefa-gecesinde-yasin-yavuza-plaket">Çaykaraspor’un 40. Yıl Vefa Gecesinde Yasin Yavuz’a Plaket</a>
-          <span class="date">12.02.2026</span>
+          <!-- Öne çıkan güncel içerik slider'ı (brief §6) — gerçek haber+proje, buildless vanilla JS -->
+          <div class="hslider" id="heroSlider" aria-roledescription="galeri" aria-label="Öne çıkan içerikler">
+            <div class="hslider__viewport" id="heroViewport">
+              <div class="hslider__track" id="heroTrack">
+                <a class="hslide" href="https://yasinyavuz.com.tr/medya/caykarasporun-40-yil-vefa-gecesinde-yasin-yavuza-plaket" style="--img:url('assets/img/news/caykaraspor-plaket.webp')">
+                  <div class="hslide__img" aria-hidden="true"></div>
+                  <div class="hslide__cap">
+                    <span class="hslide__tag">Haber <span class="sep">·</span> 12.02.2026</span>
+                    <h3 class="hslide__title">Çaykaraspor’un 40. Yıl Vefa Gecesinde Yasin Yavuz’a Plaket</h3>
+                    <span class="hslide__more">Devamını oku <span aria-hidden="true">→</span></span>
+                  </div>
+                </a>
+                <a class="hslide" href="https://yasinyavuz.com.tr/projeler/dijital-kultur-koprusu-bosna-hersek-gencler-icin-dijital-kulturel-miras-projesi" style="--img:url('assets/img/project/bosna.webp')">
+                  <div class="hslide__img" aria-hidden="true"></div>
+                  <div class="hslide__cap">
+                    <span class="hslide__tag">Proje <span class="sep">·</span> Sosyal Sorumluluk</span>
+                    <h3 class="hslide__title">Dijital Kültür Köprüsü – Bosna Hersek | Gençler İçin Dijital Kültürel Miras</h3>
+                    <span class="hslide__more">Projeyi incele <span aria-hidden="true">→</span></span>
+                  </div>
+                </a>
+                <a class="hslide" href="https://yasinyavuz.com.tr/medya/yasin-yavuz-desil-ile-uluslararasi-dijital-girisimcilik-dernegi-arasinda-is-birligi-sozlesmesi-imzaladi" style="--img:url('assets/img/news/desil-udgd.webp')">
+                  <div class="hslide__img" aria-hidden="true"></div>
+                  <div class="hslide__cap">
+                    <span class="hslide__tag">Haber <span class="sep">·</span> 28.01.2026</span>
+                    <h3 class="hslide__title">DESİL ile Uluslararası Dijital Girişimcilik Derneği Arasında İş Birliği</h3>
+                    <span class="hslide__more">Devamını oku <span aria-hidden="true">→</span></span>
+                  </div>
+                </a>
+                <a class="hslide" href="https://yasinyavuz.com.tr/projeler/koklu-miras-anadolunun-sozlu-kulturunu-gelecege-tasiyan-belgesel-proje" style="--img:url('assets/img/project/koklu-miras.webp')">
+                  <div class="hslide__img" aria-hidden="true"></div>
+                  <div class="hslide__cap">
+                    <span class="hslide__tag">Proje <span class="sep">·</span> Sosyal Sorumluluk</span>
+                    <h3 class="hslide__title">Köklü Miras | Anadolu’nun Sözlü Kültürünü Geleceğe Taşıyan Belgesel</h3>
+                    <span class="hslide__more">Projeyi incele <span aria-hidden="true">→</span></span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="hslider__ui">
+              <div class="hslider__dots" id="heroDots" role="tablist" aria-label="Slayt seçimi"></div>
+              <div class="hslider__arrows">
+                <button class="hslider__nav" id="heroPrev" type="button" aria-label="Önceki slayt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+                <button class="hslider__nav" id="heroNext" type="button" aria-label="Sonraki slayt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -341,6 +395,13 @@
         <div class="footer__brand">
           <img class="brand__logo" src="assets/img/logo-yk-white.webp" alt="Yasin Yavuz YK logosu" width="58" height="34">
           <p class="footer__desc">Girişimci, proje yöneticisi ve iletişimci. Dijital dönüşüm, sosyal sorumluluk ve yapay zekâ alanlarında etki odaklı projeler.</p>
+          <!-- Footer sosyal ikon bloğu (§13). TikTok & YouTube canlı kaynakta YOK → eklenmedi, SORULACAK. -->
+          <div class="footer__social" aria-label="Sosyal medya">
+            <a class="social-btn" href="https://facebook.com/yasinyavuz91" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2c0-.6.4-1 1-1Z"/></svg></a>
+            <a class="social-btn" href="https://instagram.com/yasinyavuz91" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a class="social-btn" href="https://x.com/yasinyavuz91" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3l-7 8 8.2 10h-6.4l-4.3-5.6L5.4 21H2.4l7.5-8.6L2 3h6.6l3.9 5.2L17.5 3Zm-1.1 16h1.7L7.7 4.8H5.9L16.4 19Z"/></svg></a>
+            <a class="social-btn" href="https://www.linkedin.com/in/yasinyavuz91/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 8.5v10H3.5v-10h3ZM5 3.5A1.75 1.75 0 1 1 5 7a1.75 1.75 0 0 1 0-3.5ZM20.5 18.5h-3v-5.3c0-1.3-.5-2.1-1.6-2.1-.9 0-1.4.6-1.6 1.2-.1.2-.1.5-.1.8v5.4h-3s.04-9.1 0-10h3v1.4c.4-.6 1.1-1.5 2.8-1.5 2 0 3.5 1.3 3.5 4.2v5.9Z"/></svg></a>
+          </div>
         </div>
         <nav class="footer__col" aria-label="Hızlı menü">
           <h4>Menü</h4>
@@ -410,6 +471,78 @@
         setTimeout(() => { rot.textContent = variants[i]; rot.classList.remove('is-out'); }, 480);
       }, 4200);
     }
+
+    // Hero öne çıkan içerik slider'ı (buildless vanilla — kütüphane yok)
+    (function heroSlider() {
+      const root = document.getElementById('heroSlider');
+      const track = document.getElementById('heroTrack');
+      const viewport = document.getElementById('heroViewport');
+      const dotsWrap = document.getElementById('heroDots');
+      const prev = document.getElementById('heroPrev');
+      const next = document.getElementById('heroNext');
+      if (!root || !track) return;
+
+      const slides = Array.from(track.children);
+      const n = slides.length;
+      let i = 0, timer = null;
+      const DELAY = 5500;
+
+      // Nokta göstergeleri
+      const dots = slides.map((_, idx) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('role', 'tab');
+        b.setAttribute('aria-label', (idx + 1) + '. slayt');
+        b.addEventListener('click', () => { go(idx); restart(); });
+        dotsWrap.appendChild(b);
+        return b;
+      });
+
+      function render() {
+        track.style.transform = 'translateX(' + (-i * 100) + '%)';
+        slides.forEach((s, idx) => {
+          const active = idx === i;
+          s.setAttribute('aria-hidden', active ? 'false' : 'true');
+          s.tabIndex = active ? 0 : -1;
+        });
+        dots.forEach((d, idx) => {
+          const active = idx === i;
+          d.classList.toggle('is-active', active);
+          d.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+      }
+      function go(idx) { i = (idx + n) % n; render(); }
+      function nextSlide() { go(i + 1); }
+      function prevSlide() { go(i - 1); }
+
+      const reduceMo = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function start() { if (!reduceMo && !timer) timer = setInterval(nextSlide, DELAY); }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+      function restart() { stop(); start(); }
+
+      next.addEventListener('click', () => { nextSlide(); restart(); });
+      prev.addEventListener('click', () => { prevSlide(); restart(); });
+
+      // Hover / focus'ta duraklat
+      root.addEventListener('mouseenter', stop);
+      root.addEventListener('mouseleave', start);
+      root.addEventListener('focusin', stop);
+      root.addEventListener('focusout', start);
+
+      // Dokunmatik kaydırma
+      let x0 = null;
+      viewport.addEventListener('pointerdown', e => { x0 = e.clientX; stop(); });
+      viewport.addEventListener('pointerup', e => {
+        if (x0 === null) return;
+        const dx = e.clientX - x0;
+        if (Math.abs(dx) > 40) { dx < 0 ? nextSlide() : prevSlide(); }
+        x0 = null; start();
+      });
+      viewport.addEventListener('pointercancel', () => { x0 = null; start(); });
+
+      render();
+      start();
+    })();
 
     // Reveal on scroll
     const items = document.querySelectorAll('.reveal');
