@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yasin Yavuz | Girişimci, Proje Yöneticisi ve İletişimci</title>
+  <meta name="description" content="Yasin Yavuz; dijital dönüşüm, sosyal sorumluluk, eğitim, kültür, spor, gençlik ve yapay zekâ alanlarında projeler üreten bir iletişimci ve proje yöneticisidir. Girişimci kimliğini, iş dünyası ve STK çalışmalarını, projelerini ve medya görünürlüğünü sunan resmi web sitesi.">
+  <link rel="canonical" href="https://yasinyavuz.com.tr/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yasin Yavuz | Girişimci, Proje Yöneticisi ve İletişimci">
+  <meta property="og:description" content="Dijital dönüşüm, sosyal sorumluluk ve yapay zekâ alanlarında projeler üreten bir iletişimci ve proje yöneticisi.">
+  <meta property="og:image" content="assets/img/portrait.webp">
+  <meta property="og:locale" content="tr_TR">
+  <meta name="theme-color" content="#14181c">
+  <link rel="icon" type="image/png" href="assets/img/logo-yk-dark.png">
+  <link rel="preload" as="image" href="assets/img/hero-slider.webp">
+  <script>document.documentElement.className += ' js';</script>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main" class="visually-hidden" style="position:absolute;left:-9999px">İçeriğe geç</a>
+
+  <!-- ============ HEADER / NAV (KANONİK shell) ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="nav" aria-label="Ana menü">
+        <a class="brand" href="#top" aria-label="Yasin Yavuz — ana sayfa">
+          <img class="brand__logo" src="assets/img/logo-yk-dark.png" alt="Yasin Yavuz YK logosu" width="62" height="38">
+          <span class="brand__name">Yasin Yavuz<small>Girişimci · Proje Yöneticisi</small></span>
+        </a>
+
+        <ul class="nav__menu" id="navMenu">
+          <li><a class="nav__link" href="#hakkinda">Hakkında</a></li>
+          <li><a class="nav__link" href="#is-dunyasi">İş Dünyası &amp; STK</a></li>
+          <li><a class="nav__link" href="#projeler">Projeler</a></li>
+          <li><a class="nav__link" href="#medya">Medya</a></li>
+          <li><a class="nav__link" href="#iletisim">İletişim</a></li>
+        </ul>
+
+        <div class="nav__right">
+          <!-- EN sayfası canlıda var (/english); Wave 2'de yerelleştirilecek -->
+          <a class="lang" href="#" aria-label="Dil: İngilizce (yakında)">EN</a>
+          <a class="btn btn--primary nav__cta" href="#iletisim">İletişime Geç</a>
+          <button class="nav__toggle" id="navToggle" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="navMenu"><span></span></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <span id="top"></span>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero band-ink" aria-label="Tanıtım" style="--hero-img:url('assets/img/hero-slider.webp'); --portrait-img:url('assets/img/portrait.webp')">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__grid">
+          <div class="hero__content">
+            <div class="hero__rule" aria-hidden="true"></div>
+            <p class="eyebrow">Girişimci · Proje Yöneticisi · İletişimci</p>
+            <h1 class="hero__title">Yasin Yavuz</h1>
+            <p class="serif" style="font-size:var(--fs-h3);color:var(--copper-300);font-weight:var(--w-med);margin-top:var(--sp-2);min-height:2.6em;line-height:1.32">
+              <span class="rot" id="heroRot" aria-live="polite">Girişimcilik, Dijital Projeler ve Sosyal Etki Odaklı Bir Yolculuk</span>
+            </p>
+            <p class="hero__lead">Dijital dönüşüm, sosyal sorumluluk ve yapay zekâ alanlarında projeler üreten; iş dünyası, sivil toplum ve medyayı tek çatı altında buluşturan bir profil.</p>
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#projeler">Projeleri Gör <span aria-hidden="true">→</span></a>
+              <a class="btn btn--ghost" href="#hakkinda">Hakkında</a>
+            </div>
+          </div>
+
+          <div class="hero__portrait" role="img" aria-label="Yasin Yavuz portresi">
+            <div class="hero__badge">
+              <div class="role">Sivil Toplum</div>
+              <div class="who">DESİL Kurucu Başkanı</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Öne çıkan güncel içerik (brief §6: sağda öne çıkan haber) -->
+        <div class="hero__ticker">
+          <span class="tag">Son Gündem</span>
+          <a class="tick-link tick-title" href="https://yasinyavuz.com.tr/medya/caykarasporun-40-yil-vefa-gecesinde-yasin-yavuza-plaket">Çaykaraspor’un 40. Yıl Vefa Gecesinde Yasin Yavuz’a Plaket</a>
+          <span class="date">12.02.2026</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HAKKINDA / GİRİŞİMCİ KİMLİK ============ -->
+    <section class="section band-paper" id="hakkinda">
+      <div class="container">
+        <div class="intro__grid">
+          <div class="reveal">
+            <p class="eyebrow">Hakkında</p>
+            <p class="intro__lead" style="margin-top:var(--sp-2)">1991 doğumlu, aslen <b>Trabzon’un Çaykara</b> ilçesine mensup olan Yasin Yavuz; marka yönetimi, kurumsal iletişim, dijital medya, yazılım projeleri ve organizasyon yönetimi alanlarında <b>çok disiplinli</b> bir kariyere sahip bir iletişim ve proje yöneticisidir.</p>
+            <div class="intro__body">
+              <p>2015 yılından bu yana kurucusu olduğu <strong>Gavia Works</strong> çatısı altında yazılım ve dijital dönüşüm süreçlerini yürütmekte; 2016’dan itibaren <strong>Dada İstanbul</strong>’un Ajans Başkanı olarak marka, iletişim ve yaratıcı projelere liderlik etmektedir.</p>
+              <p>Sivil toplum alanında <strong>Dijital Sürdürülebilir Liderlik Derneği (DESİL)</strong>’nin kurucu başkanıdır. Çalışmalarını; vatan, millet ve manevi değerlere bağlılığı, etik duruş ve sürdürülebilirlik anlayışıyla bütünleştirir.</p>
+            </div>
+            <p style="margin-top:var(--sp-3)"><a class="arrow-link" href="https://yasinyavuz.com.tr/kurumsal/oz-gecmis">Öz geçmişin tamamı <span class="ar" aria-hidden="true">→</span></a></p>
+          </div>
+
+          <div class="stats reveal" data-d="1" aria-label="Öne çıkan veriler">
+            <div class="stat"><div class="stat__num">10<span class="u">+</span></div><div class="stat__label">Yıl Deneyim</div></div>
+            <div class="stat"><div class="stat__num">5</div><div class="stat__label">Şirket &amp; Marka</div></div>
+            <div class="stat"><div class="stat__num">6</div><div class="stat__label">Dernek &amp; STK Görevi</div></div>
+            <div class="stat"><div class="stat__num">4</div><div class="stat__label">Aktif Proje</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ İŞ DÜNYASI & STK ============ -->
+    <section class="section band-sunk" id="is-dunyasi">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">İş Dünyası &amp; STK</p>
+          <h2 class="title">Kurduğu ve yönettiği şirketler, markalar ve uzmanlıklar</h2>
+          <p class="kicker">Yazılımdan reklam ajansına, savunma medyasından tasarım atölyesine uzanan bir üretim ağı.</p>
+        </div>
+
+        <div class="logos reveal" data-d="1" aria-label="Şirketler ve markalar">
+          <a class="logo-card" href="https://gaviaworks.com" target="_blank" rel="noopener" title="Gavia Works — yazılım şirketi"><img src="assets/img/brand/gavia-works.webp" alt="Gavia Works" loading="lazy"></a>
+          <a class="logo-card" href="https://dadaistanbul.com" target="_blank" rel="noopener" title="Dada İstanbul — reklam ve marka ajansı"><img src="assets/img/brand/dada-istanbul.webp" alt="Dada İstanbul" loading="lazy"></a>
+          <a class="logo-card" href="https://millimudafaa.com" target="_blank" rel="noopener" title="Milli Müdafaa — savunma haber portalı"><img src="assets/img/brand/milli-mudafaa.webp" alt="Milli Müdafaa" loading="lazy"></a>
+          <a class="logo-card" href="https://dadamutfak.com" target="_blank" rel="noopener" title="Dada Mutfak — yemek kültürü platformu"><img src="assets/img/brand/dada-mutfak.webp" alt="Dada Mutfak" loading="lazy"></a>
+          <a class="logo-card" href="https://dadacopper.com" target="_blank" rel="noopener" title="Dada Copper — bakır tasarım atölyesi"><img src="assets/img/brand/dada-copper.webp" alt="Dada Copper" loading="lazy"></a>
+        </div>
+
+        <div class="expertise">
+          <div class="section-head reveal" style="margin-bottom:var(--sp-3)">
+            <p class="eyebrow">Uzmanlık Alanları</p>
+          </div>
+          <div class="exp-grid reveal" data-d="1">
+            <div class="exp-item"><div class="exp-item__no">/ 01</div><h3 class="exp-item__title">Marka &amp; Kurumsal İletişim</h3><p class="exp-item__desc">Markaların kimliğini, dilini ve duruşunu stratejik bir çerçevede kurgular.</p></div>
+            <div class="exp-item"><div class="exp-item__no">/ 02</div><h3 class="exp-item__title">Dijital Medya &amp; İçerik Stratejisi</h3><p class="exp-item__desc">Dijital platformlar için hedef kitle odaklı içerik stratejileri geliştirir.</p></div>
+            <div class="exp-item"><div class="exp-item__no">/ 03</div><h3 class="exp-item__title">Web &amp; Yazılım Projeleri</h3><p class="exp-item__desc">Kurumsal web ve dijital platformlar için planlama, yazılım ve yönetimi bütüncül ele alır.</p></div>
+            <div class="exp-item"><div class="exp-item__no">/ 04</div><h3 class="exp-item__title">UI / UX &amp; Dijital Deneyim</h3><p class="exp-item__desc">Kullanıcı odaklı, sade ve işlevsel arayüzler tasarlar; deneyimi davranış üzerinden optimize eder.</p></div>
+            <div class="exp-item"><div class="exp-item__no">/ 05</div><h3 class="exp-item__title">Dijital Pazarlama &amp; SEO</h3><p class="exp-item__desc">Markaların dijital görünürlüğünü artıran SEO ve dijital pazarlama stratejileri geliştirir.</p></div>
+            <div class="exp-item"><div class="exp-item__no">/ 06</div><h3 class="exp-item__title">Organizasyon &amp; Proje Yönetimi</h3><p class="exp-item__desc">Kurumlar, markalar ve STK’lar için organizasyon ve proje süreçlerini planlar ve yürütür.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJELER ============ -->
+    <section class="section band-ink" id="projeler">
+      <div class="container">
+        <div class="media-head reveal">
+          <div class="section-head" style="margin-bottom:0">
+            <p class="eyebrow">Öne Çıkan Projeler</p>
+            <h2 class="title">Kültürel mirası dijital çağla buluşturan çalışmalar</h2>
+          </div>
+          <a class="arrow-link" href="https://yasinyavuz.com.tr/projeler/sosyal-sorumluluk">Tüm projeler <span class="ar" aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="proj-grid">
+          <a class="proj-card reveal" href="https://yasinyavuz.com.tr/projeler/caykara-bagimlilikla-mucadele-ve-onleyici-farkindalik-programi">
+            <div class="proj-card__img" style="background-image:url('assets/img/project/caykara.webp')"></div>
+            <div class="proj-card__body">
+              <span class="proj-card__cat">Sosyal Sorumluluk</span>
+              <h3 class="proj-card__title">Çaykara Bağımlılıkla Mücadele ve Önleyici Farkındalık Programı</h3>
+              <span class="proj-card__more"><span class="arrow-link">Detay <span class="ar" aria-hidden="true">→</span></span></span>
+            </div>
+          </a>
+          <a class="proj-card reveal" data-d="1" href="https://yasinyavuz.com.tr/projeler/dijital-kultur-koprusu-bosna-hersek-gencler-icin-dijital-kulturel-miras-projesi">
+            <div class="proj-card__img" style="background-image:url('assets/img/project/bosna.webp')"></div>
+            <div class="proj-card__body">
+              <span class="proj-card__cat">Sosyal Sorumluluk</span>
+              <h3 class="proj-card__title">Dijital Kültür Köprüsü – Bosna Hersek | Gençler İçin Dijital Kültürel Miras</h3>
+              <span class="proj-card__more"><span class="arrow-link">Detay <span class="ar" aria-hidden="true">→</span></span></span>
+            </div>
+          </a>
+          <a class="proj-card reveal" href="https://yasinyavuz.com.tr/projeler/koklu-miras-anadolunun-sozlu-kulturunu-gelecege-tasiyan-belgesel-proje">
+            <div class="proj-card__img" style="background-image:url('assets/img/project/koklu-miras.webp')"></div>
+            <div class="proj-card__body">
+              <span class="proj-card__cat">Sosyal Sorumluluk</span>
+              <h3 class="proj-card__title">Köklü Miras | Anadolu’nun Sözlü Kültürünü Geleceğe Taşıyan Belgesel</h3>
+              <span class="proj-card__more"><span class="arrow-link">Detay <span class="ar" aria-hidden="true">→</span></span></span>
+            </div>
+          </a>
+          <a class="proj-card reveal" data-d="1" href="https://yasinyavuz.com.tr/projeler/selatin-camilerde-dijital-duyuru-pano-uygulamasi">
+            <div class="proj-card__img" style="background-image:url('assets/img/project/selatin.webp')"></div>
+            <div class="proj-card__body">
+              <span class="proj-card__cat">Kurumsal &amp; Yerel</span>
+              <h3 class="proj-card__title">Selatin Camilerde Dijital Duyuru Pano Uygulaması</h3>
+              <span class="proj-card__more"><span class="arrow-link">Detay <span class="ar" aria-hidden="true">→</span></span></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MEDYA ============ -->
+    <section class="section band-paper" id="medya">
+      <div class="container">
+        <div class="media-head reveal">
+          <div class="section-head" style="margin-bottom:0">
+            <p class="eyebrow">Medya</p>
+            <h2 class="title">Basında ve gündemde</h2>
+          </div>
+          <a class="arrow-link" href="https://yasinyavuz.com.tr/medya/haberler">Tüm haberler <span class="ar" aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="news-grid">
+          <a class="news-card reveal" href="https://yasinyavuz.com.tr/medya/caykarasporun-40-yil-vefa-gecesinde-yasin-yavuza-plaket">
+            <div class="news-card__img" style="background-image:url('assets/img/news/caykaraspor-plaket.webp')"></div>
+            <div class="news-card__body">
+              <div class="news-card__meta"><span>12.02.2026</span><span class="dot"></span><span>Haberler</span></div>
+              <h3 class="news-card__title">Çaykaraspor’un 40. Yıl Vefa Gecesinde Yasin Yavuz’a Plaket</h3>
+              <p class="news-card__excerpt">40. yıl için İstanbul’da düzenlenen Vefa Gecesi’nde organizasyonun iletişim sürecine katkı sunan Yasin Yavuz’a plaket takdim edildi.</p>
+              <span class="news-card__more"><span class="arrow-link">Devamını oku <span class="ar" aria-hidden="true">→</span></span></span>
+            </div>
+          </a>
+          <a class="news-card reveal" data-d="1" href="https://yasinyavuz.com.tr/medya/yasin-yavuz-desil-ile-uluslararasi-dijital-girisimcilik-dernegi-arasinda-is-birligi-sozlesmesi-imzaladi">
+            <div class="news-card__img" style="background-image:url('assets/img/news/desil-udgd.webp')"></div>
+            <div class="news-card__body">
+              <div class="news-card__meta"><span>28.01.2026</span><span class="dot"></span><span>Haberler</span></div>
+              <h3 class="news-card__title">DESİL ile Uluslararası Dijital Girişimcilik Derneği Arasında İş Birliği</h3>
+              <p class="news-card__excerpt">Yasin Yavuz, başkanlığını yürüttüğü DESİL ile UDGD arasında ortak çalışmaları kapsayan iş birliği sözleşmesini imzaladı.</p>
+              <span class="news-card__more"><span class="arrow-link">Devamını oku <span class="ar" aria-hidden="true">→</span></span></span>
+            </div>
+          </a>
+          <a class="news-card reveal" data-d="2" href="https://yasinyavuz.com.tr/medya/yasin-yavuzdan-dr-ercan-varlibasa-ziyaret">
+            <div class="news-card__img" style="background-image:url('assets/img/news/ercan-varlibas.webp')"></div>
+            <div class="news-card__body">
+              <div class="news-card__meta"><span>28.01.2026</span><span class="dot"></span><span>Haberler</span></div>
+              <h3 class="news-card__title">Yasin Yavuz’dan Dr. Ercan Varlıbaş’a Ziyaret</h3>
+              <p class="news-card__excerpt">Yasin Yavuz, Dr. Ercan Varlıbaş’ı ziyaret ederek BİYOSAD hakkında bilgi aldı ve Çaykaraspor’un 40. yıl gecesi için davetini iletti.</p>
+              <span class="news-card__more"><span class="arrow-link">Devamını oku <span class="ar" aria-hidden="true">→</span></span></span>
+            </div>
+          </a>
+          <a class="news-card reveal" href="https://yasinyavuz.com.tr/medya/desil-yonetim-kurulu-2026-yilinin-ilk-toplantisini-stratejik-gundemle-gerceklestirdi">
+            <div class="news-card__img" style="background-image:url('assets/img/news/desil-yk-2026.webp')"></div>
+            <div class="news-card__body">
+              <div class="news-card__meta"><span>21.01.2026</span><span class="dot"></span><span>Haberler</span></div>
+              <h3 class="news-card__title">DESİL Yönetim Kurulu 2026’nın İlk Toplantısını Gerçekleştirdi</h3>
+              <p class="news-card__excerpt">Yönetim Kurulu, Yasin Yavuz başkanlığında devam eden projeleri değerlendirdi ve yeni yılın stratejik yol haritasını netleştirdi.</p>
+              <span class="news-card__more"><span class="arrow-link">Devamını oku <span class="ar" aria-hidden="true">→</span></span></span>
+            </div>
+          </a>
+          <a class="news-card reveal" data-d="1" href="https://yasinyavuz.com.tr/medya/uzungol-kis-festivali-icin-ortak-akil-bulusmasi-gerceklestirildi">
+            <div class="news-card__img" style="background-image:url('assets/img/news/uzungol.webp')"></div>
+            <div class="news-card__body">
+              <div class="news-card__meta"><span>25.11.2025</span><span class="dot"></span><span>Haberler</span></div>
+              <h3 class="news-card__title">Uzungöl Kış Festivali İçin Ortak Akıl Buluşması Gerçekleştirildi</h3>
+              <p class="news-card__excerpt">İlk kez düzenlenecek Uzungöl Kış Festivali öncesinde bölgenin kış turizmi potansiyelini güçlendirecek adımlar ele alındı.</p>
+              <span class="news-card__more"><span class="arrow-link">Devamını oku <span class="ar" aria-hidden="true">→</span></span></span>
+            </div>
+          </a>
+          <a class="news-card reveal" data-d="2" href="https://yasinyavuz.com.tr/medya/vefa-gecesinde-tarih-ve-teknoloji-bulustu-1918-kurtulus-kisa-filmi-ilk-kez-gosterildi">
+            <div class="news-card__img" style="background-image:url('assets/img/news/film-1918.webp')"></div>
+            <div class="news-card__body">
+              <div class="news-card__meta"><span>04.11.2025</span><span class="dot"></span><span>Haberler</span></div>
+              <h3 class="news-card__title">Vefa Gecesinde Tarih ve Teknoloji Buluştu: “1918: Kurtuluş” Kısa Filmi</h3>
+              <p class="news-card__excerpt">Çaykara ve Dernekpazarı’nın 61. yıl vefa gecesinde, yapay zekâ destekli “1918: Kurtuluş” kısa filminin ilk gösterimi yapıldı.</p>
+              <span class="news-card__more"><span class="arrow-link">Devamını oku <span class="ar" aria-hidden="true">→</span></span></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ YAYINLAR (admin'den gelecek — içerik uydurma YOK) ============ -->
+    <section class="section band-paper" id="yayinlar" style="padding-top:0">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Yayınlar</p>
+          <h2 class="title">Kitaplar, makaleler ve tez çalışmaları</h2>
+          <p class="kicker">Düşünsel, mesleki ve akademik üretimler yakında bu alanda yayımlanacak.</p>
+        </div>
+        <div class="pub-grid">
+          <div class="pub-card reveal">
+            <svg class="pub-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H12v16H5.5A1.5 1.5 0 0 1 4 18.5v-13ZM20 5.5A1.5 1.5 0 0 0 18.5 4H12v16h6.5a1.5 1.5 0 0 0 1.5-1.5v-13Z"/></svg>
+            <h3 class="pub-card__title">Kitaplar</h3>
+            <p class="pub-card__desc">Kitap kapağı, kısa açıklama ve yayın bilgileriyle listelenecek.</p>
+            <span class="pub-card__soon">Yakında</span>
+          </div>
+          <div class="pub-card reveal" data-d="1">
+            <svg class="pub-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 3h9l3 3v15H6V3Z"/><path d="M9 9h6M9 13h6M9 17h4"/></svg>
+            <h3 class="pub-card__title">Makaleler</h3>
+            <p class="pub-card__desc">Başlık, kategori, tarih ve kısa özetle sunulacak.</p>
+            <span class="pub-card__soon">Yakında</span>
+          </div>
+          <div class="pub-card reveal" data-d="2">
+            <svg class="pub-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3 3 7l9 4 9-4-9-4Z"/><path d="M7 9.5V15c0 1.4 2.24 2.5 5 2.5s5-1.1 5-2.5V9.5"/></svg>
+            <h3 class="pub-card__title">Tez Yazıları</h3>
+            <p class="pub-card__desc">Konu, tarih, özet ve erişim bağlantısıyla arşivlenecek.</p>
+            <span class="pub-card__soon">Yakında</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ İLETİŞİM CTA ============ -->
+    <section class="section band-ink-2" id="iletisim">
+      <div class="container">
+        <div class="cta__grid">
+          <div class="reveal">
+            <p class="eyebrow">İletişim</p>
+            <h2 class="cta__title">Birlikte üretmek için iletişime geçin</h2>
+            <p class="cta__lead">İş birlikleri, projeler ve kurumsal görüşmeler için bana ulaşabilirsiniz.</p>
+            <div class="cta__actions">
+              <a class="btn btn--primary" href="mailto:info@yasinyavuz.com.tr">E-posta gönder <span aria-hidden="true">→</span></a>
+              <a class="btn btn--ghost" href="https://www.linkedin.com/in/yasinyavuz91/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+            <!-- Sosyal: 4 gerçek kanal. TikTok & YouTube canlıda YOK → SORULACAK, eklenmedi. -->
+            <div class="social-row" aria-label="Sosyal medya">
+              <a class="social-btn" href="https://facebook.com/yasinyavuz91" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2c0-.6.4-1 1-1Z"/></svg></a>
+              <a class="social-btn" href="https://instagram.com/yasinyavuz91" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              <a class="social-btn" href="https://x.com/yasinyavuz91" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3l-7 8 8.2 10h-6.4l-4.3-5.6L5.4 21H2.4l7.5-8.6L2 3h6.6l3.9 5.2L17.5 3Zm-1.1 16h1.7L7.7 4.8H5.9L16.4 19Z"/></svg></a>
+              <a class="social-btn" href="https://www.linkedin.com/in/yasinyavuz91/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 8.5v10H3.5v-10h3ZM5 3.5A1.75 1.75 0 1 1 5 7a1.75 1.75 0 0 1 0-3.5ZM20.5 18.5h-3v-5.3c0-1.3-.5-2.1-1.6-2.1-.9 0-1.4.6-1.6 1.2-.1.2-.1.5-.1.8v5.4h-3s.04-9.1 0-10h3v1.4c.4-.6 1.1-1.5 2.8-1.5 2 0 3.5 1.3 3.5 4.2v5.9Z"/></svg></a>
+            </div>
+          </div>
+
+          <div class="contact-list reveal" data-d="1">
+            <a class="contact-row" href="mailto:info@yasinyavuz.com.tr">
+              <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <span><span class="k">E-posta</span><br><span class="v">info@yasinyavuz.com.tr</span></span>
+            </a>
+            <!-- Telefon canlıda placeholder; gerçek numara SORULACAK -->
+            <div class="contact-row">
+              <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 5c0-1 .8-2 2-2h2l2 5-2 1.5a12 12 0 0 0 5 5L16.5 17l5 2v2c0 1.2-1 2-2 2A16 16 0 0 1 4 5Z"/></svg>
+              <span><span class="k">Telefon</span><br><span class="v muted">Yakında eklenecek</span></span>
+            </div>
+            <div class="contact-row">
+              <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span><span class="k">Konum</span><br><span class="v">İstanbul, Türkiye</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER (KANONİK shell) ============ -->
+  <footer class="site-footer band-ink">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img class="brand__logo" src="assets/img/logo-yk-white.webp" alt="Yasin Yavuz YK logosu" width="58" height="34">
+          <p class="footer__desc">Girişimci, proje yöneticisi ve iletişimci. Dijital dönüşüm, sosyal sorumluluk ve yapay zekâ alanlarında etki odaklı projeler.</p>
+        </div>
+        <nav class="footer__col" aria-label="Hızlı menü">
+          <h4>Menü</h4>
+          <ul>
+            <li><a href="#hakkinda">Hakkında</a></li>
+            <li><a href="#is-dunyasi">İş Dünyası &amp; STK</a></li>
+            <li><a href="#projeler">Projeler</a></li>
+            <li><a href="#medya">Medya</a></li>
+            <li><a href="#iletisim">İletişim</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__col" aria-label="Kurumsal">
+          <h4>Kurumsal</h4>
+          <ul>
+            <li><a href="https://yasinyavuz.com.tr/kurumsal/oz-gecmis">Öz Geçmiş</a></li>
+            <li><a href="https://yasinyavuz.com.tr/kurumsal/egitim-hayati">Eğitim Hayatı</a></li>
+            <li><a href="https://yasinyavuz.com.tr/kurumsal/ilke-ve-degerler">İlke ve Değerler</a></li>
+            <li><a href="https://yasinyavuz.com.tr/sirketler-ve-markalar">Şirketler &amp; Markalar</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Yasin Yavuz. Tüm Hakları Saklıdır.</p>
+        <div class="footer__legal">
+          <a href="https://yasinyavuz.com.tr/kurumsal/kvkk">KVKK Aydınlatma Metni</a>
+          <a href="https://yasinyavuz.com.tr/kurumsal/aydinlatma-metni">Aydınlatma Metni</a>
+          <a href="https://yasinyavuz.com.tr/kurumsal/cerezler">Çerezler</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Sticky header shadow
+    const header = document.getElementById('siteHeader');
+    const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
+    onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+    // Mobile nav
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('navMenu');
+    toggle.addEventListener('click', () => {
+      const open = document.body.classList.toggle('nav-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    menu.addEventListener('click', e => {
+      if (e.target.closest('.nav__link')) {
+        document.body.classList.remove('nav-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Hero rotating tagline (4 gerçek brief §6 başlığı)
+    const rot = document.getElementById('heroRot');
+    const variants = [
+      'Girişimcilik, Dijital Projeler ve Sosyal Etki Odaklı Bir Yolculuk',
+      'İş Dünyası, STK ve Proje Geliştirme Alanında Çok Yönlü Bir Profil',
+      'Markalar, Projeler ve Sivil Toplum Alanında Sürdürülebilir Etki',
+      'Dijital Dönüşüm, Girişimcilik ve Sosyal Sorumluluk Odaklı Çalışmalar'
+    ];
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (rot && !reduce) {
+      let i = 0;
+      setInterval(() => {
+        i = (i + 1) % variants.length;
+        rot.classList.add('is-out');
+        setTimeout(() => { rot.textContent = variants[i]; rot.classList.remove('is-out'); }, 480);
+      }, 4200);
+    }
+
+    // Reveal on scroll
+    const items = document.querySelectorAll('.reveal');
+    if (!reduce && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      items.forEach(el => io.observe(el));
+    } else {
+      items.forEach(el => el.classList.add('in'));
+    }
+  </script>
+</body>
+</html>

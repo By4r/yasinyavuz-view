@@ -1,0 +1,95 @@
+/* ============================================================
+   tokens.css — Yasin Yavuz kişisel marka · TASARIM TOKEN SİSTEMİ
+   Tek kaynak. Renk/tipografi/spacing HARDCODE YASAK — hep buradan.
+   Palet: gerçek "YK" koyu-monokrom logo + sıcak portre + Dada Copper'dan kalibre.
+   ============================================================ */
+
+@import url("./assets/fonts/fonts.css");
+
+:root {
+  /* — Mürekkep (ink) monokrom — YK logosundan — */
+  --ink-900: #14181c;   /* metin & en koyu yüzey */
+  --ink-850: #191e24;
+  --ink-800: #1e242b;   /* koyu bant yüzeyi (hero) */
+  --ink-700: #2b323b;
+  --ink-600: #3d454f;
+  --ink-500: #5b636d;   /* muted metin (kâğıt üstü) */
+  --ink-400: #838a93;   /* daha silik */
+
+  /* — Kâğıt (sıcak nötr) — */
+  --paper:        #f4f1ea;  /* sayfa zemini */
+  --paper-raised: #fbfaf6;  /* kâğıt üstü kart */
+  --paper-sunk:   #ece7dc;  /* çukur alan */
+  --white:        #ffffff;
+
+  /* — Çizgiler — */
+  --line:      #e3ddd0;              /* kâğıt üstü kenarlık */
+  --line-soft: #eee9df;
+  --line-dark: rgba(255,255,255,.12);/* ink üstü kenarlık */
+  --line-dark-soft: rgba(255,255,255,.07);
+
+  /* — Bakır aksan (Dada Copper) — tek sıcak vurgu — */
+  --copper:      #b87333;  /* saf bakır */
+  --copper-600:  #a45f2a;  /* koyu bakır (kâğıt üstü fill/hover) */
+  --copper-ink:  #8a4d21;  /* metin/link — AA on paper */
+  --copper-300:  #d79c66;  /* açık bakır — ink üstü metin/aksan */
+  --copper-tint: rgba(184,115,51,.10);
+
+  /* — Anlamsal atamalar — */
+  --bg:          var(--paper);
+  --fg:          var(--ink-900);
+  --fg-muted:    var(--ink-500);
+  --accent:      var(--copper);
+  --accent-text: var(--copper-ink);
+
+  /* — Tipografi aileleri — */
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body:    "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* — Tip ölçeği (akışkan) — */
+  --fs-display: clamp(2.6rem, 1.4rem + 4.6vw, 5rem);
+  --fs-h1:      clamp(2rem, 1.35rem + 2.6vw, 3.3rem);
+  --fs-h2:      clamp(1.65rem, 1.2rem + 1.7vw, 2.5rem);
+  --fs-h3:      clamp(1.25rem, 1.05rem + .75vw, 1.6rem);
+  --fs-lead:    clamp(1.12rem, 1.02rem + .45vw, 1.4rem);
+  --fs-body:    1.0625rem;   /* 17px */
+  --fs-sm:      0.9375rem;   /* 15px */
+  --fs-xs:      0.8125rem;   /* 13px */
+  --fs-eyebrow: 0.75rem;     /* 12px mono */
+
+  --lh-tight: 1.08;
+  --lh-snug:  1.25;
+  --lh-body:  1.62;
+
+  /* — Ağırlıklar — */
+  --w-reg: 400; --w-med: 500; --w-semi: 600; --w-bold: 700; --w-x: 800;
+
+  /* — Spacing (8px tabanlı) — */
+  --sp-1: .5rem; --sp-2: 1rem; --sp-3: 1.5rem; --sp-4: 2rem;
+  --sp-5: 3rem;  --sp-6: 4rem; --sp-7: 6rem;  --sp-8: 8rem;
+
+  --section-y: clamp(4rem, 2.6rem + 6vw, 8rem);  /* bölüm dikey ritmi — R1 */
+  --gutter:    clamp(1.25rem, .6rem + 2.6vw, 3rem);
+  --maxw: 1240px;
+  --maxw-text: 68ch;
+
+  /* — Biçim — */
+  --r-sm: 7px; --r-md: 13px; --r-lg: 22px; --r-pill: 999px;
+  --border: 1px solid var(--line);
+
+  --sh-1: 0 1px 2px rgba(20,24,28,.05), 0 4px 16px rgba(20,24,28,.05);
+  --sh-2: 0 2px 6px rgba(20,24,28,.07), 0 18px 44px rgba(20,24,28,.12);
+  --sh-copper: 0 10px 30px rgba(184,115,51,.22);
+
+  /* — Hareket — */
+  --ease: cubic-bezier(.2,.7,.2,1);
+  --ease-out: cubic-bezier(.16,1,.3,1);
+  --dur: .55s;
+  --dur-fast: .22s;
+
+  /* — Header — */
+  --header-h: 76px;
+  --logo-h: 38px;
+  --logo-w: 62px;
+}
