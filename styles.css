@@ -87,17 +87,13 @@ main [id] { scroll-margin-top: 124px; }
   border-bottom: 1px solid var(--line);
   transition: box-shadow var(--dur-fast) var(--ease);
 }
-/* Scroll'da kompakt + gölge → belirgin yapışkan bar */
+/* Scroll'da yalnızca gölge — layout kaymaz (flicker/bug önlenir) */
 .mast.is-stuck { box-shadow: 0 6px 22px rgba(20,24,28,.09); }
-.mast.is-stuck .mast__bar { padding-top: var(--sp-2); }
-.mast.is-stuck .mast__tagline { display: none; }
-.mast.is-stuck .mast__logo { width: 50px; height: 38px; }
-.mast.is-stuck .mast__nav { padding-block: var(--sp-1) var(--sp-2); }
-.mast__bar, .mast__logo, .mast__nav { transition: padding var(--dur-fast) var(--ease), width var(--dur-fast) var(--ease), height var(--dur-fast) var(--ease); }
 .mast__bar { position: relative; display: flex; justify-content: center; align-items: center; padding-top: var(--sp-3); }
 .mast__brand { display: inline-flex; flex-direction: column; align-items: center; gap: .5em; text-align: center; }
 .mast__logo { width: 62px; height: 48px; object-fit: contain; display: block; }
-.mast__tagline { font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-500); font-weight: var(--w-semi); }
+.mast__tagline { font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-500); font-weight: var(--w-semi); white-space: nowrap; }
+.mast__divider { width: 1px; height: 22px; background: var(--line); flex: none; }
 
 .mast__nav { display: flex; justify-content: center; align-items: center; gap: clamp(1rem, .3rem + 1.6vw, 2.2rem); padding-block: var(--sp-2) var(--sp-3); flex-wrap: wrap; }
 .mast__link {
@@ -109,7 +105,8 @@ main [id] { scroll-margin-top: 124px; }
 .mast__link:hover { color: var(--ink-900); }
 .mast__link:hover::after, .mast__link[aria-current="page"]::after { right: 0; }
 
-.mast__lang { position: absolute; right: 0; top: 50%; transform: translateY(-50%); }
+.mast__lang { position: absolute; right: 0; top: 50%; transform: translateY(-50%); display: flex; align-items: center; gap: .8rem; }
+@media (max-width: 1080px) { .mast__tagline, .mast__divider { display: none; } }
 .lang { position: relative; }
 .lang > summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: .3em; min-height: 44px; font-size: var(--fs-xs); font-weight: var(--w-bold); color: var(--ink-700); padding: .5em .7em; border: 1px solid var(--line); border-radius: var(--r-sm); }
 .lang > summary::-webkit-details-marker { display: none; }
@@ -122,8 +119,8 @@ main [id] { scroll-margin-top: 124px; }
 .mast__toggle { display: none; }
 
 /* ============ HERO (split: sol portre + imza / sağ 2×2 mozaik) ============ */
-.hero { position: relative; }
-.hero__grid { display: grid; grid-template-columns: 4fr 6fr; min-height: clamp(460px, 52vw, 600px); min-width: 0; }
+.hero { position: relative; padding: var(--sp-3) var(--gutter) 0; }
+.hero__grid { display: grid; grid-template-columns: 4fr 6fr; min-height: clamp(440px, 50vw, 580px); min-width: 0; max-width: var(--maxw); margin-inline: auto; border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; }
 .hero__grid > * { min-width: 0; overflow: hidden; }
 
 /* SOL — portre paneli */
@@ -221,14 +218,18 @@ main [id] { scroll-margin-top: 124px; }
 .social-btn svg { width: 19px; height: 19px; }
 .social-btn:hover { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.5); }
 
-/* ============ YAYINLAR (brief §5.6 / §11) ============ */
-.pubs { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-3); }
-.pub-card { display: flex; flex-direction: column; gap: var(--sp-2); min-height: 190px; padding: var(--sp-4); background: var(--paper); border: 1px solid var(--line); border-radius: var(--r-md); }
-.pub-card__label { font-size: var(--fs-xs); font-weight: var(--w-bold); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-500); }
-.pub-card__title { font-size: var(--fs-h3); font-weight: var(--w-bold); color: var(--ink-900); line-height: 1.28; }
-.pub-card__meta { font-size: var(--fs-xs); color: var(--ink-500); margin-top: auto; }
-.pub-card__soon { font-size: var(--fs-sm); color: var(--ink-500); margin: 0; }
-.pub-card__tag { align-self: flex-start; margin-top: auto; font-size: var(--fs-xs); font-weight: var(--w-semi); color: var(--ink-500); background: var(--paper-sunk); border: 1px solid var(--line); border-radius: var(--r-pill); padding: .3em .85em; }
+/* ============ YAYINLAR — tek pencere slider (numankurtulmus kitap bölümü minimalinde) ============ */
+.strip__track.pubtrack > * { flex: 0 0 100%; }
+.pubslide { display: grid; grid-template-columns: 4fr 8fr; gap: clamp(1.5rem, .8rem + 2.5vw, 3.5rem); align-items: center; min-height: 300px; padding: clamp(1.5rem, 1rem + 2vw, 3rem); background: var(--paper); border: 1px solid var(--line); border-radius: var(--r-md); }
+.pubslide__cover { position: relative; width: 100%; max-width: 240px; margin-inline: auto; aspect-ratio: 3 / 4; background: var(--ink-900); color: var(--paper); border-radius: var(--r-sm); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--sp-2); }
+.pubslide__cover svg { width: 50px; height: 50px; opacity: .9; }
+.pubslide__covlabel { font-size: var(--fs-xs); font-weight: var(--w-bold); letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.72); }
+.pubslide__body { display: flex; flex-direction: column; align-items: flex-start; gap: var(--sp-2); min-width: 0; }
+.pubslide__label { font-size: var(--fs-xs); font-weight: var(--w-bold); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-500); }
+.pubslide__title { font-size: var(--fs-h2); font-weight: var(--w-bold); color: var(--ink-900); line-height: 1.22; letter-spacing: -.01em; }
+.pubslide__desc { margin: 0; font-size: var(--fs-lead); color: var(--ink-600); }
+.pubslide__meta { font-size: var(--fs-xs); color: var(--ink-500); }
+.pubslide__tag { font-size: var(--fs-xs); font-weight: var(--w-semi); color: var(--ink-500); background: var(--paper-sunk); border: 1px solid var(--line); border-radius: var(--r-pill); padding: .35em .95em; }
 
 /* ============ SOSYAL MEDYA (brief §5.7 / §13) ============ */
 .follow { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-2); }
@@ -308,6 +309,8 @@ main [id] { scroll-margin-top: 124px; }
   .exp-grid { grid-template-columns: 1fr; }
   .assoc-grid { grid-template-columns: 1fr; }
   .follow { grid-template-columns: 1fr; }
+  .pubslide { grid-template-columns: 1fr; }
+  .pubslide__cover { max-width: 180px; margin-inline: 0; }
   .footer__bottom { justify-content: center; text-align: center; }
 }
 
