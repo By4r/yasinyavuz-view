@@ -79,16 +79,6 @@
           <p>Yasin Yavuz’un koordine ettiği bu süreçte gece boyunca kulübün 40 yıllık geçmişini yansıtan özel içerikler, vizyon sunumları ve proje anlatımları davetlilerle paylaşıldı. Son dönemde hayata geçirilen saha ve tesis iyileştirmeleri, gençlik ve altyapı yatırımları ile kulübün kurumsal marka ve gelir modeli çalışmaları hakkında bilgi verildi. Ayrıca geleceğe yönelik yeni tesis projeleri, futbol okulu yapılanması, çok branşlı kulüp modeli ve dijital kulüp altyapısı gibi hedefler de program kapsamında aktarıldı.</p>
           <p>Programın en dikkat çeken bölümlerinden biri ise 40. yıla özel hazırlanan açık artırma organizasyonu oldu. Özel tasarım formalar, arma çalışmaları ve koleksiyon değeri taşıyan eserler davetlilerin yoğun ilgisiyle açık artırmaya sunuldu. Organizasyona sağladığı katkılar dolayısıyla Çaykaraspor yönetimi tarafından Yasin Yavuz’a plaket takdim edildi. Plaket, Cevahir Holding Yönetim Kurulu Başkanı Yusuf Cevahir tarafından verildi.</p>
         </div>
-          <div class="article__tags">
-            <div class="strip strip--tags" data-strip>
-              <div class="strip__viewport"><div class="strip__track"><span class="cat-chip">Yasin Yavuz</span><span class="cat-chip">Çaykaraspor</span><span class="cat-chip">40.yıl</span><span class="cat-chip">Gece</span></div></div>
-              <div class="strip__nav">
-                <button class="strip__arrow" data-dir="prev" aria-label="Önceki"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
-                <div class="strip__dots" role="tablist" aria-label="Sayfalar"></div>
-                <button class="strip__arrow" data-dir="next" aria-label="Sonraki"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
-              </div>
-            </div>
-          </div>
           <p class="article__back"><a class="arrow-link" href="medya.html">← Tüm haberler</a></p>
         </div>
       </div>
@@ -133,48 +123,5 @@
     } else { items.forEach(el => el.classList.add('in')); }
   </script>
 
-  <script>
-    (function () {
-      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      document.querySelectorAll('[data-strip]').forEach(strip => {
-        const vp = strip.querySelector('.strip__viewport');
-        const navEl = strip.querySelector('.strip__nav');
-        const dotsWrap = strip.querySelector('.strip__dots');
-        const prev = strip.querySelector('[data-dir="prev"]');
-        const next = strip.querySelector('[data-dir="next"]');
-        let pages = 1;
-        const maxScroll = () => vp.scrollWidth - vp.clientWidth;
-        const pageCount = () => maxScroll() <= 1 ? 1 : Math.ceil(vp.scrollWidth / vp.clientWidth);
-        const activePage = () => vp.scrollLeft >= maxScroll() - 2 ? pages - 1 : Math.round(vp.scrollLeft / vp.clientWidth);
-        const buildDots = () => {
-          pages = pageCount();
-          strip.classList.toggle('is-single', pages <= 1);
-          if (navEl) navEl.hidden = pages <= 1;
-          dotsWrap.innerHTML = '';
-          if (pages <= 1) return;
-          for (let p = 0; p < pages; p++) {
-            const b = document.createElement('button');
-            b.className = 'strip__dot'; b.type = 'button';
-            b.setAttribute('role', 'tab'); b.setAttribute('aria-label', (p + 1) + '. sayfa');
-            b.addEventListener('click', () => vp.scrollTo({ left: Math.min(p * vp.clientWidth, maxScroll()), behavior: reduce ? 'auto' : 'smooth' }));
-            dotsWrap.appendChild(b);
-          }
-          sync();
-        };
-        const sync = () => {
-          if (pages <= 1) return;
-          const a = activePage();
-          [...dotsWrap.children].forEach((d, idx) => d.classList.toggle('is-active', idx === a));
-          prev.disabled = vp.scrollLeft <= 4;
-          next.disabled = vp.scrollLeft >= maxScroll() - 4;
-        };
-        prev.addEventListener('click', () => vp.scrollBy({ left: -vp.clientWidth * 0.9, behavior: reduce ? 'auto' : 'smooth' }));
-        next.addEventListener('click', () => vp.scrollBy({ left: vp.clientWidth * 0.9, behavior: reduce ? 'auto' : 'smooth' }));
-        vp.addEventListener('scroll', () => window.requestAnimationFrame(sync), { passive: true });
-        window.addEventListener('resize', buildDots, { passive: true });
-        buildDots();
-      });
-    })();
-  </script>
 </body>
 </html>
