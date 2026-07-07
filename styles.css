@@ -495,6 +495,9 @@ main [id] { scroll-margin-top: 124px; }
 
 /* — Detay makale (haber/proje detay — brief §9 proje detay, §10 haber liste+detay) — */
 .article__wrap { max-width: 780px; margin-inline: auto; }
+/* Gövde metni görselle AYNI blokta olsun: prose'un dar 68ch (--maxw-text) sınırını kaldır,
+   böylece metin de wrap genişliğini (=lead görsel genişliği) doldurur; sol+sağ kenar birebir çakışır. */
+.article__wrap .prose { max-width: none; }
 /* Justify KORUNUR; Türkçe uzun kelimelerde boşluk patlamasını tireleme (hyphens) çözer.
    lang="tr" (html) sözlük tirelemesini açar; overflow-wrap kırılamayan uzun token için güvenlik ağı. */
 .article__wrap .prose > p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; }
