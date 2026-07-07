@@ -43,25 +43,26 @@
   --accent:      var(--copper);
   --accent-text: var(--copper-ink);
 
-  /* — Tipografi aileleri — */
-  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
-  --font-body:    "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  /* — Tipografi aileleri — numankurtulmus.com görsel dili: tek aile Quicksand (yuvarlak geometrik
+     sans, Google Fonts / SIL OFL, self-host). Referansta body + başlık + nav tek bu aileyi kullanır. — */
+  --font-display: "Quicksand", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body:    "Quicksand", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "Quicksand", system-ui, -apple-system, sans-serif;
 
-  /* — Tip ölçeği (akışkan) — */
-  --fs-display: clamp(2.6rem, 1.4rem + 4.6vw, 5rem);
-  --fs-h1:      clamp(2rem, 1.35rem + 2.6vw, 3.3rem);
-  --fs-h2:      clamp(1.65rem, 1.2rem + 1.7vw, 2.5rem);
-  --fs-h3:      clamp(1.25rem, 1.05rem + .75vw, 1.6rem);
-  --fs-lead:    clamp(1.12rem, 1.02rem + .45vw, 1.4rem);
-  --fs-body:    1.0625rem;   /* 17px */
+  /* — Tip ölçeği (akışkan) — numankurtulmus dizginli ölçeğine kalibre (section başlığı ~28–31px). — */
+  --fs-display: clamp(2.3rem, 1.5rem + 3.2vw, 3.7rem);   /* hero adı */
+  --fs-h1:      clamp(1.9rem, 1.35rem + 2vw, 2.9rem);
+  --fs-h2:      clamp(1.5rem, 1.25rem + 1.1vw, 1.95rem);  /* şerit başlığı (nk ~28px) */
+  --fs-h3:      clamp(1.18rem, 1.05rem + .55vw, 1.42rem);
+  --fs-lead:    clamp(1.08rem, 1rem + .4vw, 1.32rem);
+  --fs-body:    1rem;        /* 16px — nk gövde */
   --fs-sm:      0.9375rem;   /* 15px */
-  --fs-xs:      0.8125rem;   /* 13px */
-  --fs-eyebrow: 0.75rem;     /* 12px mono */
+  --fs-xs:      0.8125rem;   /* 13px — tarih/meta */
+  --fs-eyebrow: 0.78rem;     /* 12.5px etiket */
 
-  --lh-tight: 1.08;
-  --lh-snug:  1.25;
-  --lh-body:  1.62;
+  --lh-tight: 1.12;
+  --lh-snug:  1.28;
+  --lh-body:  1.6;
 
   /* — Ağırlıklar — */
   --w-reg: 400; --w-med: 500; --w-semi: 600; --w-bold: 700; --w-x: 800;
@@ -75,13 +76,13 @@
   --maxw: 1240px;
   --maxw-text: 68ch;
 
-  /* — Biçim — */
-  --r-sm: 7px; --r-md: 13px; --r-lg: 22px; --r-pill: 999px;
+  /* — Biçim — numankurtulmus düz/keskin kart estetiği: küçük radius, hafif gölge. — */
+  --r-sm: 2px; --r-md: 4px; --r-lg: 6px; --r-pill: 999px;
   --border: 1px solid var(--line);
 
-  --sh-1: 0 1px 2px rgba(20,24,28,.05), 0 4px 16px rgba(20,24,28,.05);
-  --sh-2: 0 2px 6px rgba(20,24,28,.07), 0 18px 44px rgba(20,24,28,.12);
-  --sh-copper: 0 10px 30px rgba(26,26,26,.20);
+  --sh-1: 0 1px 2px rgba(20,24,28,.04), 0 6px 18px rgba(20,24,28,.06);
+  --sh-2: 0 2px 6px rgba(20,24,28,.06), 0 16px 40px rgba(20,24,28,.10);
+  --sh-copper: 0 8px 24px rgba(26,26,26,.16);
 
   /* — Hareket — */
   --ease: cubic-bezier(.2,.7,.2,1);
