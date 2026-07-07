@@ -7,33 +7,34 @@
 @import url("./assets/fonts/fonts.css");
 
 :root {
-  /* — Mürekkep (ink) monokrom — YK logosundan — */
-  --ink-900: #14181c;   /* metin & en koyu yüzey */
-  --ink-850: #191e24;
-  --ink-800: #1e242b;   /* koyu bant yüzeyi (hero) */
-  --ink-700: #2b323b;
-  --ink-600: #3d454f;
-  --ink-500: #5b636d;   /* muted metin (kâğıt üstü) */
-  --ink-400: #838a93;   /* daha silik */
+  /* — Mürekkep (ink) monokrom — CANLI kurumsal nötr gri rampası (yasinyavuz.com.tr) — */
+  --ink-900: #1a1a1a;   /* metin & en koyu yüzey — canlı başlık/CTA (#1a1a1a) */
+  --ink-850: #212121;
+  --ink-800: #292929;   /* koyu bant yüzeyi + canlı gövde metni (#292929) */
+  --ink-700: #3a3a3a;
+  --ink-600: #545454;
+  --ink-500: #898989;   /* muted metin — canlı global muted (#898989) */
+  --ink-400: #999999;   /* daha silik — canlı ikincil (#999999) */
 
-  /* — Kâğıt (sıcak nötr) — */
-  --paper:        #f4f1ea;  /* sayfa zemini */
-  --paper-raised: #fbfaf6;  /* kâğıt üstü kart */
-  --paper-sunk:   #ece7dc;  /* çukur alan */
+  /* — Kâğıt (canlı beyaz zemin) — */
+  --paper:        #ffffff;  /* sayfa zemini — canlı body (#ffffff) */
+  --paper-raised: #ffffff;  /* kâğıt üstü kart (kenarlıkla ayrılır) */
+  --paper-sunk:   #f9f9f9;  /* çukur alan — canlı footer bandı grisi (#f9f9f9) */
   --white:        #ffffff;
 
-  /* — Çizgiler — */
-  --line:      #e3ddd0;              /* kâğıt üstü kenarlık */
-  --line-soft: #eee9df;
+  /* — Çizgiler — yapısal nötr (canlıda explicit divider yok; gri rampadan türetildi) — */
+  --line:      #e6e6e6;              /* kâğıt üstü kenarlık */
+  --line-soft: #f0f0f0;
   --line-dark: rgba(255,255,255,.12);/* ink üstü kenarlık */
   --line-dark-soft: rgba(255,255,255,.07);
 
-  /* — Bakır aksan (Dada Copper) — tek sıcak vurgu — */
-  --copper:      #b87333;  /* saf bakır */
-  --copper-600:  #a45f2a;  /* koyu bakır (kâğıt üstü fill/hover) */
-  --copper-ink:  #8a4d21;  /* metin/link — AA on paper */
-  --copper-300:  #d79c66;  /* açık bakır — ink üstü metin/aksan */
-  --copper-tint: rgba(184,115,51,.10);
+  /* — Aksan — CANLI SİTEDE KURUMSAL AKSAN YOK → nötr (açık zemin: siyaha yakın / koyu zemin: beyaz).
+       Token isimleri korundu (yapı sabit); değerler monokroma çekildi. — */
+  --copper:      #292929;  /* aksan (açık zemin) */
+  --copper-600:  #1a1a1a;  /* primary buton dolgu — canlı CTA (#1a1a1a) */
+  --copper-ink:  #1a1a1a;  /* metin/link — AA on white */
+  --copper-300:  #ffffff;  /* koyu zemin üstü aksan/metin — canlı beyaz */
+  --copper-tint: rgba(26,26,26,.06);
 
   /* — Anlamsal atamalar — */
   --bg:          var(--paper);
@@ -80,7 +81,7 @@
 
   --sh-1: 0 1px 2px rgba(20,24,28,.05), 0 4px 16px rgba(20,24,28,.05);
   --sh-2: 0 2px 6px rgba(20,24,28,.07), 0 18px 44px rgba(20,24,28,.12);
-  --sh-copper: 0 10px 30px rgba(184,115,51,.22);
+  --sh-copper: 0 10px 30px rgba(26,26,26,.20);
 
   /* — Hareket — */
   --ease: cubic-bezier(.2,.7,.2,1);
