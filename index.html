@@ -33,21 +33,21 @@
       </div>
 
       <nav class="mast__nav" id="mastNav" aria-label="Ana menü">
-        <a class="mast__link" href="#ozgecmis">Özgeçmiş</a>
-        <a class="mast__link" href="#medya">Medya</a>
-        <a class="mast__link" href="#projeler">Projeler</a>
-        <a class="mast__link" href="#yayinlar">Yayınlar</a>
-        <a class="mast__link" href="mailto:info@yasinyavuz.com.tr">İletişim</a>
+        <a class="mast__link" href="ozgecmis.html">Özgeçmiş</a>
+        <a class="mast__link" href="medya.html">Medya</a>
+        <a class="mast__link" href="projeler.html">Projeler</a>
+        <a class="mast__link" href="yayinlar.html">Yayınlar</a>
+        <a class="mast__link" href="iletisim.html">İletişim</a>
         <span class="mast__divider" aria-hidden="true"></span>
-        <!-- Dil seçici (brief §14: TR ana + EN/ES/DE/RU). Çeviri içeriği YOK → "Yakında" (SORULACAK/Wave 2). -->
+        <!-- Dil: VARSAYILAN EN. Kutusuz tetikleyici (border yok) + açılır liste; diğer diller placeholder (çeviri Wave 2, uydurma içerik yok). -->
         <div class="mast__lang">
           <details class="lang" id="langMenu">
-            <summary aria-label="Dil seçimi">TR
+            <summary aria-label="Dil seçimi">EN
               <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </summary>
             <ul class="lang__menu">
-              <li><a href="#" aria-current="true">Türkçe <span class="soon">Aktif</span></a></li>
-              <li><a href="#" title="İngilizce — yakında">English <span class="soon">Yakında</span></a></li>
+              <li><a href="#" aria-current="true">English</a></li>
+              <li><a href="#" title="Türkçe">Türkçe</a></li>
               <li><a href="#" title="İspanyolca — yakında">Español <span class="soon">Yakında</span></a></li>
               <li><a href="#" title="Almanca — yakında">Deutsch <span class="soon">Yakında</span></a></li>
               <li><a href="#" title="Rusça — yakında">Русский <span class="soon">Yakında</span></a></li>
@@ -75,19 +75,19 @@
 
         <!-- SAĞ: 2×2 öne çıkan mozaik — 4 gerçek öğe (haber/proje) -->
         <div class="hero__mosaic">
-          <a class="feat" href="https://yasinyavuz.com.tr/medya/caykarasporun-40-yil-vefa-gecesinde-yasin-yavuza-plaket" style="--img:url('assets/img/news/caykaraspor-plaket.webp')">
+          <a class="feat" href="haber-caykaraspor-plaket.html" style="--img:url('assets/img/news/caykaraspor-plaket.webp')">
             <span class="feat__img" aria-hidden="true"></span>
             <span class="feat__cap"><span class="feat__tag">Haber · 12.02.2026</span><span class="feat__title">Çaykaraspor’un 40. Yıl Vefa Gecesinde Yasin Yavuz’a Plaket</span></span>
           </a>
-          <a class="feat" href="https://yasinyavuz.com.tr/projeler/dijital-kultur-koprusu-bosna-hersek-gencler-icin-dijital-kulturel-miras-projesi" style="--img:url('assets/img/project/bosna.webp')">
+          <a class="feat" href="proje-bosna.html" style="--img:url('assets/img/project/bosna.webp')">
             <span class="feat__img" aria-hidden="true"></span>
             <span class="feat__cap"><span class="feat__tag">Proje · Sosyal Sorumluluk</span><span class="feat__title">Dijital Kültür Köprüsü – Bosna Hersek</span></span>
           </a>
-          <a class="feat" href="https://yasinyavuz.com.tr/medya/yasin-yavuz-desil-ile-uluslararasi-dijital-girisimcilik-dernegi-arasinda-is-birligi-sozlesmesi-imzaladi" style="--img:url('assets/img/news/desil-udgd.webp')">
+          <a class="feat" href="haber-desil-udgd-sozlesme.html" style="--img:url('assets/img/news/desil-udgd.webp')">
             <span class="feat__img" aria-hidden="true"></span>
             <span class="feat__cap"><span class="feat__tag">Haber · 28.01.2026</span><span class="feat__title">DESİL ile Uluslararası Dijital Girişimcilik Derneği İş Birliği</span></span>
           </a>
-          <a class="feat" href="https://yasinyavuz.com.tr/projeler/koklu-miras-anadolunun-sozlu-kulturunu-gelecege-tasiyan-belgesel-proje" style="--img:url('assets/img/project/koklu-miras.webp')">
+          <a class="feat" href="proje-koklu-miras.html" style="--img:url('assets/img/project/koklu-miras.webp')">
             <span class="feat__img" aria-hidden="true"></span>
             <span class="feat__cap"><span class="feat__tag">Proje · Sosyal Sorumluluk</span><span class="feat__title">Köklü Miras | Anadolu’nun Sözlü Kültürünü Geleceğe Taşıyan Belgesel</span></span>
           </a>
@@ -104,7 +104,7 @@
             <p class="eyebrow">Özgeçmiş</p>
             <h2 class="bio__title">Girişimcilik, dijital üretim ve sosyal etki odağında bir yolculuk</h2>
             <p class="bio__lead">1991 doğumlu Yasin Yavuz; marka yönetimi, dijital medya, yazılım projeleri ve organizasyon yönetimi alanlarında çok disiplinli bir iletişim ve proje yöneticisidir. Gavia Works ve Dada İstanbul’un kurucusu, DESİL’in kurucu başkanıdır.</p>
-            <p class="bio__cta"><a class="arrow-link" href="https://yasinyavuz.com.tr/kurumsal/oz-gecmis">Özgeçmişini oku <span class="ar" aria-hidden="true">→</span></a></p>
+            <p class="bio__cta"><a class="arrow-link" href="ozgecmis.html">Özgeçmişini oku <span class="ar" aria-hidden="true">→</span></a></p>
           </div>
         </div>
       </div>
@@ -115,33 +115,33 @@
       <div class="container">
         <div class="head reveal">
           <h2 class="head__title">Basında ve Gündemde</h2>
-          <a class="arrow-link" href="https://yasinyavuz.com.tr/medya/haberler">Tüm haberler <span class="ar" aria-hidden="true">→</span></a>
+          <a class="arrow-link" href="medya.html">Tüm haberler <span class="ar" aria-hidden="true">→</span></a>
         </div>
 
         <div class="strip reveal" data-d="1" data-strip>
           <div class="strip__viewport">
             <div class="strip__track">
-              <a class="card" href="https://yasinyavuz.com.tr/medya/caykarasporun-40-yil-vefa-gecesinde-yasin-yavuza-plaket">
+              <a class="card" href="haber-caykaraspor-plaket.html">
                 <div class="card__img" style="--img:url('assets/img/news/caykaraspor-plaket.webp')"></div>
                 <div class="card__body"><h3 class="card__title">Çaykaraspor’un 40. Yıl Vefa Gecesinde Yasin Yavuz’a Plaket</h3><span class="card__date">12.02.2026</span></div>
               </a>
-              <a class="card" href="https://yasinyavuz.com.tr/medya/yasin-yavuz-desil-ile-uluslararasi-dijital-girisimcilik-dernegi-arasinda-is-birligi-sozlesmesi-imzaladi">
+              <a class="card" href="haber-desil-udgd-sozlesme.html">
                 <div class="card__img" style="--img:url('assets/img/news/desil-udgd.webp')"></div>
                 <div class="card__body"><h3 class="card__title">DESİL ile Uluslararası Dijital Girişimcilik Derneği Arasında İş Birliği</h3><span class="card__date">28.01.2026</span></div>
               </a>
-              <a class="card" href="https://yasinyavuz.com.tr/medya/yasin-yavuzdan-dr-ercan-varlibasa-ziyaret">
+              <a class="card" href="haber-ercan-varlibas-ziyaret.html">
                 <div class="card__img" style="--img:url('assets/img/news/ercan-varlibas.webp')"></div>
                 <div class="card__body"><h3 class="card__title">Yasin Yavuz’dan Dr. Ercan Varlıbaş’a Ziyaret</h3><span class="card__date">28.01.2026</span></div>
               </a>
-              <a class="card" href="https://yasinyavuz.com.tr/medya/desil-yonetim-kurulu-2026-yilinin-ilk-toplantisini-stratejik-gundemle-gerceklestirdi">
+              <a class="card" href="haber-desil-yk-2026.html">
                 <div class="card__img" style="--img:url('assets/img/news/desil-yk-2026.webp')"></div>
                 <div class="card__body"><h3 class="card__title">DESİL Yönetim Kurulu 2026’nın İlk Toplantısını Gerçekleştirdi</h3><span class="card__date">21.01.2026</span></div>
               </a>
-              <a class="card" href="https://yasinyavuz.com.tr/medya/uzungol-kis-festivali-icin-ortak-akil-bulusmasi-gerceklestirildi">
+              <a class="card" href="haber-uzungol-festival.html">
                 <div class="card__img" style="--img:url('assets/img/news/uzungol.webp')"></div>
                 <div class="card__body"><h3 class="card__title">Uzungöl Kış Festivali İçin Ortak Akıl Buluşması Gerçekleştirildi</h3><span class="card__date">25.11.2025</span></div>
               </a>
-              <a class="card" href="https://yasinyavuz.com.tr/medya/vefa-gecesinde-tarih-ve-teknoloji-bulustu-1918-kurtulus-kisa-filmi-ilk-kez-gosterildi">
+              <a class="card" href="haber-vefa-1918-film.html">
                 <div class="card__img" style="--img:url('assets/img/news/film-1918.webp')"></div>
                 <div class="card__body"><h3 class="card__title">Vefa Gecesinde Tarih ve Teknoloji Buluştu: “1918: Kurtuluş” Kısa Filmi</h3><span class="card__date">04.11.2025</span></div>
               </a>
@@ -161,25 +161,25 @@
       <div class="container">
         <div class="head reveal">
           <h2 class="head__title">Öne Çıkan Projeler</h2>
-          <a class="arrow-link" href="https://yasinyavuz.com.tr/projeler/sosyal-sorumluluk">Tüm projeler <span class="ar" aria-hidden="true">→</span></a>
+          <a class="arrow-link" href="projeler.html">Tüm projeler <span class="ar" aria-hidden="true">→</span></a>
         </div>
 
         <div class="strip reveal" data-d="1" data-strip>
           <div class="strip__viewport">
             <div class="strip__track">
-              <a class="card" href="https://yasinyavuz.com.tr/projeler/caykara-bagimlilikla-mucadele-ve-onleyici-farkindalik-programi">
+              <a class="card" href="proje-caykara.html">
                 <div class="card__img" style="--img:url('assets/img/project/caykara.webp')"></div>
                 <div class="card__body"><span class="card__cat">Sosyal Sorumluluk</span><h3 class="card__title">Çaykara Bağımlılıkla Mücadele ve Önleyici Farkındalık Programı</h3></div>
               </a>
-              <a class="card" href="https://yasinyavuz.com.tr/projeler/dijital-kultur-koprusu-bosna-hersek-gencler-icin-dijital-kulturel-miras-projesi">
+              <a class="card" href="proje-bosna.html">
                 <div class="card__img" style="--img:url('assets/img/project/bosna.webp')"></div>
                 <div class="card__body"><span class="card__cat">Sosyal Sorumluluk</span><h3 class="card__title">Dijital Kültür Köprüsü – Bosna Hersek | Gençler İçin Dijital Kültürel Miras</h3></div>
               </a>
-              <a class="card" href="https://yasinyavuz.com.tr/projeler/koklu-miras-anadolunun-sozlu-kulturunu-gelecege-tasiyan-belgesel-proje">
+              <a class="card" href="proje-koklu-miras.html">
                 <div class="card__img" style="--img:url('assets/img/project/koklu-miras.webp')"></div>
                 <div class="card__body"><span class="card__cat">Sosyal Sorumluluk</span><h3 class="card__title">Köklü Miras | Anadolu’nun Sözlü Kültürünü Geleceğe Taşıyan Belgesel</h3></div>
               </a>
-              <a class="card" href="https://yasinyavuz.com.tr/projeler/selatin-camilerde-dijital-duyuru-pano-uygulamasi">
+              <a class="card" href="proje-selatin.html">
                 <div class="card__img" style="--img:url('assets/img/project/selatin.webp')"></div>
                 <div class="card__body"><span class="card__cat">Kurumsal &amp; Yerel</span><h3 class="card__title">Selatin Camilerde Dijital Duyuru Pano Uygulaması</h3></div>
               </a>
@@ -202,6 +202,7 @@
             <h2 class="head__title">Yayınlar</h2>
             <p class="head__kicker">Kitaplar, makaleler ve akademik çalışmalar.</p>
           </div>
+          <a class="arrow-link" href="yayinlar.html">Tüm yayınlar <span class="ar" aria-hidden="true">→</span></a>
         </div>
         <div class="strip reveal" data-d="1" data-strip>
           <div class="strip__viewport">
@@ -263,23 +264,32 @@
             <p class="head__kicker">Güncel projeler, haberler ve üretim süreçlerini paylaşımlardan izleyin.</p>
           </div>
         </div>
-        <div class="follow reveal" data-d="1">
-          <a class="follow__card" href="https://facebook.com/yasinyavuz91" target="_blank" rel="noopener">
-            <span class="follow__icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2c0-.6.4-1 1-1Z"/></svg></span>
-            <span><span class="follow__name">Facebook</span><span class="follow__handle">@yasinyavuz91</span></span>
-          </a>
-          <a class="follow__card" href="https://instagram.com/yasinyavuz91" target="_blank" rel="noopener">
-            <span class="follow__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
-            <span><span class="follow__name">Instagram</span><span class="follow__handle">@yasinyavuz91</span></span>
-          </a>
-          <a class="follow__card" href="https://x.com/yasinyavuz91" target="_blank" rel="noopener">
-            <span class="follow__icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3l-7 8 8.2 10h-6.4l-4.3-5.6L5.4 21H2.4l7.5-8.6L2 3h6.6l3.9 5.2L17.5 3Zm-1.1 16h1.7L7.7 4.8H5.9L16.4 19Z"/></svg></span>
-            <span><span class="follow__name">X</span><span class="follow__handle">@yasinyavuz91</span></span>
-          </a>
-          <a class="follow__card" href="https://www.linkedin.com/in/yasinyavuz91/" target="_blank" rel="noopener">
-            <span class="follow__icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 8.5v10H3.5v-10h3ZM5 3.5A1.75 1.75 0 1 1 5 7a1.75 1.75 0 0 1 0-3.5ZM20.5 18.5h-3v-5.3c0-1.3-.5-2.1-1.6-2.1-.9 0-1.4.6-1.6 1.2-.1.2-.1.5-.1.8v5.4h-3s.04-9.1 0-10h3v1.4c.4-.6 1.1-1.5 2.8-1.5 2 0 3.5 1.3 3.5 4.2v5.9Z"/></svg></span>
-            <span><span class="follow__name">LinkedIn</span><span class="follow__handle">yasinyavuz91</span></span>
-          </a>
+        <div class="strip strip--social reveal" data-d="1" data-strip>
+          <div class="strip__viewport">
+            <div class="strip__track follow__track">
+              <a class="follow__card" href="https://facebook.com/yasinyavuz91" target="_blank" rel="noopener">
+                <span class="follow__icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2c0-.6.4-1 1-1Z"/></svg></span>
+                <span><span class="follow__name">Facebook</span><span class="follow__handle">@yasinyavuz91</span></span>
+              </a>
+              <a class="follow__card" href="https://instagram.com/yasinyavuz91" target="_blank" rel="noopener">
+                <span class="follow__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
+                <span><span class="follow__name">Instagram</span><span class="follow__handle">@yasinyavuz91</span></span>
+              </a>
+              <a class="follow__card" href="https://x.com/yasinyavuz91" target="_blank" rel="noopener">
+                <span class="follow__icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3l-7 8 8.2 10h-6.4l-4.3-5.6L5.4 21H2.4l7.5-8.6L2 3h6.6l3.9 5.2L17.5 3Zm-1.1 16h1.7L7.7 4.8H5.9L16.4 19Z"/></svg></span>
+                <span><span class="follow__name">X</span><span class="follow__handle">@yasinyavuz91</span></span>
+              </a>
+              <a class="follow__card" href="https://www.linkedin.com/in/yasinyavuz91/" target="_blank" rel="noopener">
+                <span class="follow__icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 8.5v10H3.5v-10h3ZM5 3.5A1.75 1.75 0 1 1 5 7a1.75 1.75 0 0 1 0-3.5ZM20.5 18.5h-3v-5.3c0-1.3-.5-2.1-1.6-2.1-.9 0-1.4.6-1.6 1.2-.1.2-.1.5-.1.8v5.4h-3s.04-9.1 0-10h3v1.4c.4-.6 1.1-1.5 2.8-1.5 2 0 3.5 1.3 3.5 4.2v5.9Z"/></svg></span>
+                <span><span class="follow__name">LinkedIn</span><span class="follow__handle">yasinyavuz91</span></span>
+              </a>
+            </div>
+          </div>
+          <div class="strip__nav">
+            <button class="strip__arrow" data-dir="prev" aria-label="Önceki hesaplar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+            <div class="strip__dots" role="tablist" aria-label="Sayfalar"></div>
+            <button class="strip__arrow" data-dir="next" aria-label="Sonraki hesaplar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+          </div>
         </div>
       </div>
     </section>
@@ -291,7 +301,7 @@
     <div class="container">
       <div class="footer__top">
         <img class="footer__logo" src="assets/img/logo-yk-white.webp" alt="Yasin Yavuz YK logosu" width="210" height="76">
-        <p class="footer__desc">Girişimci, proje yöneticisi ve iletişimci. Dijital dönüşüm, sosyal sorumluluk ve yapay zekâ alanlarında etki odaklı projeler.</p>
+        <p class="footer__desc">Dijital dönüşüm, sosyal sorumluluk ve yapay zekâ alanlarında etki odaklı projeler üreten girişimci, proje yöneticisi ve iletişimci.</p>
       </div>
       <div class="footer__bottom">
         <p class="footer__copy">© 2026 Yasin Yavuz. Tüm Hakları Saklıdır.</p>
@@ -365,34 +375,44 @@
     // Şerit carousel — ok + dot (buildless, scroll-snap tabanlı sayfa modeli)
     document.querySelectorAll('[data-strip]').forEach(strip => {
       const vp = strip.querySelector('.strip__viewport');
+      const navEl = strip.querySelector('.strip__nav');
       const dotsWrap = strip.querySelector('.strip__dots');
       const prev = strip.querySelector('[data-dir="prev"]');
       const next = strip.querySelector('[data-dir="next"]');
       let pages = 1;
 
-      const pageCount = () => Math.max(1, Math.round(vp.scrollWidth / vp.clientWidth));
-      const activePage = () => Math.round(vp.scrollLeft / vp.clientWidth);
+      // Gerçek kaydırılabilir mesafe. 1px'lik alt eşik: taşma yoksa tek sayfa → sayfalandırma yok.
+      const maxScroll = () => vp.scrollWidth - vp.clientWidth;
+      // Sayfa = bir görünüm genişliği. round yerine ceil → kısmi taşan son ekran da sayılır.
+      const pageCount = () => maxScroll() <= 1 ? 1 : Math.ceil(vp.scrollWidth / vp.clientWidth);
+      const activePage = () =>
+        vp.scrollLeft >= maxScroll() - 2 ? pages - 1 : Math.round(vp.scrollLeft / vp.clientWidth);
 
       const buildDots = () => {
         pages = pageCount();
+        // Tek sayfa (taşma yok) → dot/ok tümüyle gizli; birden çok sayfada gerçek sayı kadar dot.
+        strip.classList.toggle('is-single', pages <= 1);
+        if (navEl) navEl.hidden = pages <= 1;
         dotsWrap.innerHTML = '';
+        if (pages <= 1) return;
         for (let p = 0; p < pages; p++) {
           const b = document.createElement('button');
           b.className = 'strip__dot';
           b.type = 'button';
           b.setAttribute('role', 'tab');
           b.setAttribute('aria-label', (p + 1) + '. sayfa');
-          b.addEventListener('click', () => vp.scrollTo({ left: p * vp.clientWidth, behavior: reduce ? 'auto' : 'smooth' }));
+          b.addEventListener('click', () => vp.scrollTo({ left: Math.min(p * vp.clientWidth, maxScroll()), behavior: reduce ? 'auto' : 'smooth' }));
           dotsWrap.appendChild(b);
         }
         sync();
       };
 
       const sync = () => {
+        if (pages <= 1) return;
         const a = activePage();
         [...dotsWrap.children].forEach((d, idx) => d.classList.toggle('is-active', idx === a));
         prev.disabled = vp.scrollLeft <= 4;
-        next.disabled = vp.scrollLeft >= vp.scrollWidth - vp.clientWidth - 4;
+        next.disabled = vp.scrollLeft >= maxScroll() - 4;
       };
 
       prev.addEventListener('click', () => vp.scrollBy({ left: -vp.clientWidth * 0.9, behavior: reduce ? 'auto' : 'smooth' }));

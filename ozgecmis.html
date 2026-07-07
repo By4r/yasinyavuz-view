@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Özgeçmiş | Yasin Yavuz</title>
+  <meta name="description" content="Yasin Yavuz’un girişimci yolculuğu; eğitim, iş hayatı, şirketler, sivil toplum çalışmaları ve uzmanlık alanlarını tıklanabilir bir zaman çizelgesiyle sunan özgeçmiş sayfası.">
+  <link rel="canonical" href="https://yasinyavuz.com.tr/kurumsal/oz-gecmis">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Özgeçmiş | Yasin Yavuz">
+  <meta property="og:description" content="Girişimcilik, dijital üretim ve sosyal etki odağında çok disiplinli bir iletişim ve proje yöneticisi.">
+  <meta property="og:image" content="assets/img/portrait.webp">
+  <meta property="og:locale" content="tr_TR">
+  <meta name="theme-color" content="#1a1a1a">
+  <link rel="icon" type="image/png" href="assets/img/logo-yk-dark.png">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/quicksand-latin.woff2" crossorigin>
+  <script>document.documentElement.className += ' js';</script>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main" class="visually-hidden">İçeriğe geç</a>
+
+  <!-- ============ HEADER / MAST (KANONİK — index.html ile birebir; DEĞİŞTİRME) ============ -->
+  <header class="mast" id="mast">
+    <div class="container">
+      <div class="mast__bar">
+        <a class="mast__brand" href="index.html" aria-label="Yasin Yavuz — ana sayfa">
+          <img class="mast__logo" src="assets/img/logo-yk-dark.png" alt="Yasin Yavuz" width="62" height="48">
+        </a>
+        <button class="mast__toggle" id="navToggle" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="mastNav"><span></span></button>
+      </div>
+
+      <nav class="mast__nav" id="mastNav" aria-label="Ana menü">
+        <a class="mast__link" href="ozgecmis.html" aria-current="page">Özgeçmiş</a>
+        <a class="mast__link" href="medya.html">Medya</a>
+        <a class="mast__link" href="projeler.html">Projeler</a>
+        <a class="mast__link" href="yayinlar.html">Yayınlar</a>
+        <a class="mast__link" href="iletisim.html">İletişim</a>
+        <span class="mast__divider" aria-hidden="true"></span>
+        <div class="mast__lang">
+          <details class="lang" id="langMenu">
+            <summary aria-label="Dil seçimi">EN
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <ul class="lang__menu">
+              <li><a href="#" aria-current="true">English</a></li>
+              <li><a href="#" title="Türkçe">Türkçe</a></li>
+              <li><a href="#" title="İspanyolca — yakında">Español <span class="soon">Yakında</span></a></li>
+              <li><a href="#" title="Almanca — yakında">Deutsch <span class="soon">Yakında</span></a></li>
+              <li><a href="#" title="Rusça — yakında">Русский <span class="soon">Yakında</span></a></li>
+            </ul>
+          </details>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero page-hero--img" style="--hero-img:url('assets/img/banner/ozgecmis.webp')">
+      <div class="container page-hero__inner">
+        <nav class="crumbs" aria-label="İçerik yolu">
+          <a href="index.html">Ana Sayfa</a><span class="sep" aria-hidden="true">/</span><span aria-current="page">Özgeçmiş</span>
+        </nav>
+        <h1 class="page-hero__title">Özgeçmiş</h1>
+        <p class="page-hero__lead">Girişimci yolculuğu; soldaki başlığı seçin, ayrıntı sağda açılsın.</p>
+      </div>
+    </section>
+
+    <!-- Özgeçmiş — tek interaktif blok (numankurtulmus /ozgecmis): SOL sabit portre + tıklanabilir liste / SAĞ değişen içerik -->
+    <section class="section band-paper">
+      <div class="container">
+        <div class="cv reveal">
+          <div class="cv__aside">
+            <div class="cv__portrait" role="img" aria-label="Yasin Yavuz portresi" style="--portrait-img:url('assets/img/portrait.webp')"></div>
+            <h2 class="cv__heading">Kariyer Yolculuğu</h2>
+            <ol class="cv__nav" role="tablist" aria-label="Özgeçmiş başlıkları">
+              <li role="presentation"><button class="cv__item" type="button" role="tab" id="cv-tab-0" aria-controls="cv-panel-0" aria-selected="true">
+                <span class="cv__item-title">Genel Bakış</span>
+              </button></li>
+              <li role="presentation"><button class="cv__item" type="button" role="tab" id="cv-tab-1" aria-controls="cv-panel-1" aria-selected="false" tabindex="-1">
+                <span class="cv__item-title">Eğitim</span>
+              </button></li>
+              <li role="presentation"><button class="cv__item" type="button" role="tab" id="cv-tab-2" aria-controls="cv-panel-2" aria-selected="false" tabindex="-1">
+                <span class="cv__item-period">2015 –</span><span class="cv__item-title">Kurucu</span><span class="cv__item-org">Gavia Works</span>
+              </button></li>
+              <li role="presentation"><button class="cv__item" type="button" role="tab" id="cv-tab-3" aria-controls="cv-panel-3" aria-selected="false" tabindex="-1">
+                <span class="cv__item-period">2016 –</span><span class="cv__item-title">Ajans Başkanı</span><span class="cv__item-org">Dada İstanbul</span>
+              </button></li>
+              <li role="presentation"><button class="cv__item" type="button" role="tab" id="cv-tab-4" aria-controls="cv-panel-4" aria-selected="false" tabindex="-1">
+                <span class="cv__item-period">Süregelen</span><span class="cv__item-title">Yayın Yönetmeni</span><span class="cv__item-org">Milli Müdafaa</span>
+              </button></li>
+              <li role="presentation"><button class="cv__item" type="button" role="tab" id="cv-tab-5" aria-controls="cv-panel-5" aria-selected="false" tabindex="-1">
+                <span class="cv__item-period">2024 –</span><span class="cv__item-title">Medya ve Kurumsal İletişim Direktörü</span><span class="cv__item-org">Çaykaraspor</span>
+              </button></li>
+              <li role="presentation"><button class="cv__item" type="button" role="tab" id="cv-tab-6" aria-controls="cv-panel-6" aria-selected="false" tabindex="-1">
+                <span class="cv__item-title">Sivil Toplum &amp; STK</span>
+              </button></li>
+              <li role="presentation"><button class="cv__item" type="button" role="tab" id="cv-tab-7" aria-controls="cv-panel-7" aria-selected="false" tabindex="-1">
+                <span class="cv__item-title">Uzmanlık Alanları</span>
+              </button></li>
+            </ol>
+          </div>
+
+          <div class="cv__panels">
+            <article class="cv__panel is-active" role="tabpanel" id="cv-panel-0" aria-labelledby="cv-tab-0" tabindex="0">
+              <span class="cv__panel-period">1991 —</span>
+              <h3 class="cv__panel-title">Genel Bakış</h3>
+              <p>1991 doğumlu, aslen Trabzon’un Çaykara ilçesine mensup olan Yasin Yavuz; marka yönetimi, kurumsal iletişim, dijital medya, yazılım projeleri ve organizasyon yönetimi alanlarında çok disiplinli bir iletişim ve proje yöneticisidir.</p>
+              <p>2015’ten bu yana kurucusu olduğu Gavia Works ile yazılım ve dijital dönüşüm, 2016’dan itibaren Dada İstanbul’un Ajans Başkanı olarak marka, iletişim ve organizasyon projelerini yürütür. Kamu, özel sektör ve sivil toplum projelerinde marka stratejisi, kurumsal kimlik, dijital platform ve saha yönetimi alanlarında aktif rol üstlenmiştir.</p>
+              <p>Akademik altyapısını, saha tecrübesini ve disiplinler arası birikimini stratejik bir bakışla birleştirerek marka, kurum ve projelere sürdürülebilir değer üretmeyi; dijital çağın imkânlarını toplumsal sorumluluk bilinciyle harmanlayan bir yaklaşımla etki odaklı çalışmalar yürütmeyi hedefler.</p>
+              <div class="form__actions">
+                <a class="arrow-link" href="projeler.html">Projeler <span class="ar" aria-hidden="true">→</span></a>
+                <a class="arrow-link" href="medya.html">Basın &amp; Medya <span class="ar" aria-hidden="true">→</span></a>
+                <a class="arrow-link" href="yayinlar.html">Yayınlar <span class="ar" aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <article class="cv__panel" role="tabpanel" id="cv-panel-1" aria-labelledby="cv-tab-1" tabindex="0" hidden>
+              <h3 class="cv__panel-title">Eğitim</h3>
+              <p><strong>2011 – 2015 · İstanbul Kültür Üniversitesi</strong><br>Sanat ve Tasarım Fakültesi, İletişim Tasarımı (Multimedya)</p>
+              <p><strong>2013 – 2016 · İstanbul Kültür Üniversitesi</strong><br>Sanat ve Tasarım Fakültesi, İletişim Sanatları</p>
+              <p><strong>2015 – 2017 · Bahçeşehir Üniversitesi (Yüksek Lisans)</strong><br>Sosyal Bilimler Enstitüsü, Reklamcılık ve Marka İletişimi Yönetimi</p>
+              <p><strong>2019 · İstanbul Üniversitesi</strong><br>İşletme Fakültesi, İşletme ve Yönetim</p>
+              <p><strong>2021 – 2023 · Anadolu Üniversitesi</strong><br>Açıköğretim Fakültesi, Medya ve İletişim</p>
+              <p><strong>2023 – 2024 · İstanbul Teknik Üniversitesi</strong><br>İşletme Yüksek Lisans Programı (MBA), Micro MBA</p>
+            </article>
+
+            <article class="cv__panel" role="tabpanel" id="cv-panel-2" aria-labelledby="cv-tab-2" tabindex="0" hidden>
+              <span class="cv__panel-period">2015 – Süregelen</span>
+              <h3 class="cv__panel-title">Kurucu · Gavia Works</h3>
+              <p>2015 yılından bu yana kurucusu olduğu Gavia Works çatısı altında yazılım, dijital dönüşüm ve proje yönetimi süreçlerini yürütmektedir.</p>
+              <p>İstanbul merkezli Gavia Works; özel yazılım ve mobil uygulama geliştirme alanlarında, yerel ve global kurumlara ihtiyaç odaklı, ölçeklenebilir ve güvenli teknoloji çözümleri sunar.</p>
+            </article>
+
+            <article class="cv__panel" role="tabpanel" id="cv-panel-3" aria-labelledby="cv-tab-3" tabindex="0" hidden>
+              <span class="cv__panel-period">2016 – Süregelen</span>
+              <h3 class="cv__panel-title">Ajans Başkanı · Dada İstanbul</h3>
+              <p>2016 yılından itibaren Dada İstanbul’un Ajans Başkanı olarak marka, iletişim, organizasyon ve yaratıcı projelere liderlik etmektedir.</p>
+              <p>İstanbul merkezli bir reklam ve marka ajansı olan Dada İstanbul, dijital odaklı yaklaşımıyla markalar için stratejik, yaratıcı ve sürdürülebilir iletişim çözümleri üretir.</p>
+            </article>
+
+            <article class="cv__panel" role="tabpanel" id="cv-panel-4" aria-labelledby="cv-tab-4" tabindex="0" hidden>
+              <span class="cv__panel-period">Süregelen</span>
+              <h3 class="cv__panel-title">Yayın Yönetmeni · Milli Müdafaa</h3>
+              <p>Savunma sanayii ve stratejik alanlara odaklanan Milli Müdafaa platformunda yayın yönetmenliği görevini sürdürmektedir.</p>
+              <p>Milli Müdafaa; Türk savunma sanayii ve küresel savunma sektöründeki gelişmelere odaklanan bağımsız bir haber ve analiz portalıdır.</p>
+            </article>
+
+            <article class="cv__panel" role="tabpanel" id="cv-panel-5" aria-labelledby="cv-tab-5" tabindex="0" hidden>
+              <span class="cv__panel-period">2024 – Süregelen</span>
+              <h3 class="cv__panel-title">Medya ve Kurumsal İletişim Direktörü · Çaykaraspor</h3>
+              <p>Mayıs 2024’ten bu yana Çaykaraspor’da Medya ve Kurumsal İletişim Direktörü olarak; kulübün kurumsal iletişim, medya ilişkileri ve dijital iletişim süreçlerini yönetmektedir.</p>
+            </article>
+
+            <article class="cv__panel" role="tabpanel" id="cv-panel-6" aria-labelledby="cv-tab-6" tabindex="0" hidden>
+              <h3 class="cv__panel-title">Sivil Toplum &amp; STK Çalışmaları</h3>
+              <p><strong>Dijital Sürdürülebilir Liderlik Derneği (DESİL)</strong><br>Kurucu / Yönetim Kurulu Başkanı · 2024</p>
+              <p><strong>Trabzonlular Federasyonu</strong><br>Yönetim Kurulu Üyesi · 2025–</p>
+              <p><strong>Çaykaraspor</strong><br>Medya ve Kurumsal İletişim Direktörü · Mayıs 2024–</p>
+              <p><strong>Çaykara ve Dernekpazarı Kültür Yardımlaşma Derneği</strong><br>Yönetim Kurulu Yedek Üyesi</p>
+              <p><strong>Merter Sanayici ve İşadamları Derneği</strong><br>Üye</p>
+              <p><strong>Şile Trabzonlular Derneği</strong><br>Kurucu Başkan · 24 Aralık 2024</p>
+            </article>
+
+            <article class="cv__panel" role="tabpanel" id="cv-panel-7" aria-labelledby="cv-tab-7" tabindex="0" hidden>
+              <h3 class="cv__panel-title">Uzmanlık Alanları</h3>
+              <p><strong>Marka &amp; Kurumsal İletişim</strong><br>Markaların kimliğini, dilini ve duruşunu stratejik bir çerçevede kurgular.</p>
+              <p><strong>Dijital Medya &amp; İçerik Stratejisi</strong><br>Dijital platformlar için hedef kitle odaklı içerik stratejileri geliştirir.</p>
+              <p><strong>Web &amp; Yazılım Projeleri</strong><br>Kurumsal web siteleri ve dijital platformlar için planlama, yazılım ve yönetim süreçlerini bütüncül olarak ele alır.</p>
+              <p><strong>UI / UX &amp; Dijital Deneyim</strong><br>Kullanıcı odaklı, sade ve işlevsel arayüzler tasarlar; deneyimi kullanıcı davranışı üzerinden optimize eder.</p>
+              <p><strong>Dijital Pazarlama &amp; SEO</strong><br>Markaların dijital dünyadaki görünürlüğünü artırmaya yönelik SEO ve dijital pazarlama stratejileri geliştirir.</p>
+              <p><strong>Organizasyon &amp; Proje Yönetimi</strong><br>Kurumlar, markalar ve sivil toplum yapıları için organizasyon ve proje yönetimi süreçlerini planlar ve yürütür.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER (KANONİK — index.html ile birebir; DEĞİŞTİRME) ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <img class="footer__logo" src="assets/img/logo-yk-white.webp" alt="Yasin Yavuz YK logosu" width="210" height="76">
+        <p class="footer__desc">Dijital dönüşüm, sosyal sorumluluk ve yapay zekâ alanlarında etki odaklı projeler üreten girişimci, proje yöneticisi ve iletişimci.</p>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Yasin Yavuz. Tüm Hakları Saklıdır.</p>
+        <div class="footer__legal">
+          <a href="https://yasinyavuz.com.tr/kurumsal/kvkk">KVKK Aydınlatma Metni</a>
+          <a href="https://yasinyavuz.com.tr/kurumsal/aydinlatma-metni">Aydınlatma Metni</a>
+          <a href="https://yasinyavuz.com.tr/kurumsal/cerezler">Çerezler</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const mast = document.getElementById('mast');
+    const onScroll = () => mast.classList.toggle('is-stuck', window.scrollY > 12);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    const footerEl = document.querySelector('.site-footer');
+    const mainEl = document.getElementById('main');
+    const setFooterSpace = () => {
+      const reveal = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      mainEl.style.marginBottom = (reveal && footerEl) ? footerEl.offsetHeight + 'px' : '';
+    };
+    setFooterSpace();
+    window.addEventListener('load', setFooterSpace);
+    window.addEventListener('resize', setFooterSpace, { passive: true });
+
+    const toggle = document.getElementById('navToggle');
+    const nav = document.getElementById('mastNav');
+    toggle.addEventListener('click', () => {
+      const open = document.body.classList.toggle('nav-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', e => {
+      if (e.target.closest('.mast__link')) {
+        document.body.classList.remove('nav-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    const langEl = document.getElementById('langMenu');
+    if (langEl) {
+      document.addEventListener('click', e => { if (!langEl.contains(e.target)) langEl.open = false; });
+      langEl.querySelectorAll('.lang__menu a').forEach(a => a.addEventListener('click', () => { langEl.open = false; }));
+    }
+
+    const items = document.querySelectorAll('.reveal');
+    if (!reduce && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      items.forEach(el => io.observe(el));
+    } else {
+      items.forEach(el => el.classList.add('in'));
+    }
+  </script>
+
+  <!-- Özgeçmiş sayfasına özel: interaktif liste (sol tab → sağ panel) -->
+  <script>
+    (function () {
+      const cv = document.querySelector('.cv');
+      if (!cv) return;
+      const tabs = [...cv.querySelectorAll('.cv__item')];
+      const panels = [...cv.querySelectorAll('.cv__panel')];
+      const select = (i) => {
+        tabs.forEach((t, idx) => { const on = idx === i; t.setAttribute('aria-selected', on ? 'true' : 'false'); t.tabIndex = on ? 0 : -1; });
+        panels.forEach((p, idx) => { const on = idx === i; p.classList.toggle('is-active', on); p.hidden = !on; });
+      };
+      tabs.forEach((t, i) => {
+        t.addEventListener('click', () => select(i));
+        t.addEventListener('keydown', (e) => {
+          let n = null;
+          if (e.key === 'ArrowDown' || e.key === 'ArrowRight') n = (i + 1) % tabs.length;
+          if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') n = (i - 1 + tabs.length) % tabs.length;
+          if (e.key === 'Home') n = 0;
+          if (e.key === 'End') n = tabs.length - 1;
+          if (n !== null) { e.preventDefault(); tabs[n].focus(); select(n); }
+        });
+      });
+      select(0);
+    })();
+  </script>
+</body>
+</html>
