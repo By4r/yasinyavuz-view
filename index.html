@@ -34,14 +34,13 @@
 
       <nav class="mast__nav" id="mastNav" aria-label="Ana menü">
         <a class="mast__link" href="#ozgecmis">Özgeçmiş</a>
-        <a class="mast__link" href="#projeler">Projeler</a>
         <a class="mast__link" href="#medya">Medya</a>
+        <a class="mast__link" href="#projeler">Projeler</a>
         <a class="mast__link" href="#yayinlar">Yayınlar</a>
         <a class="mast__link" href="mailto:info@yasinyavuz.com.tr">İletişim</a>
+        <span class="mast__divider" aria-hidden="true"></span>
         <!-- Dil seçici (brief §14: TR ana + EN/ES/DE/RU). Çeviri içeriği YOK → "Yakında" (SORULACAK/Wave 2). -->
         <div class="mast__lang">
-          <span class="mast__tagline">Girişimci · Proje Yöneticisi · İletişimci</span>
-          <span class="mast__divider" aria-hidden="true"></span>
           <details class="lang" id="langMenu">
             <summary aria-label="Dil seçimi">TR
               <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
@@ -111,46 +110,8 @@
       </div>
     </section>
 
-    <!-- ============ PROJELER ŞERİDİ (numankurtulmus tekrarlı desen — brief §5.4) ============ -->
-    <section class="section band-sunk" id="projeler">
-      <div class="container">
-        <div class="head reveal">
-          <h2 class="head__title">Öne Çıkan Projeler</h2>
-          <a class="arrow-link" href="https://yasinyavuz.com.tr/projeler/sosyal-sorumluluk">Tüm projeler <span class="ar" aria-hidden="true">→</span></a>
-        </div>
-
-        <div class="strip reveal" data-d="1" data-strip>
-          <div class="strip__viewport">
-            <div class="strip__track">
-              <a class="card" href="https://yasinyavuz.com.tr/projeler/caykara-bagimlilikla-mucadele-ve-onleyici-farkindalik-programi">
-                <div class="card__img" style="--img:url('assets/img/project/caykara.webp')"></div>
-                <div class="card__body"><span class="card__cat">Sosyal Sorumluluk</span><h3 class="card__title">Çaykara Bağımlılıkla Mücadele ve Önleyici Farkındalık Programı</h3></div>
-              </a>
-              <a class="card" href="https://yasinyavuz.com.tr/projeler/dijital-kultur-koprusu-bosna-hersek-gencler-icin-dijital-kulturel-miras-projesi">
-                <div class="card__img" style="--img:url('assets/img/project/bosna.webp')"></div>
-                <div class="card__body"><span class="card__cat">Sosyal Sorumluluk</span><h3 class="card__title">Dijital Kültür Köprüsü – Bosna Hersek | Gençler İçin Dijital Kültürel Miras</h3></div>
-              </a>
-              <a class="card" href="https://yasinyavuz.com.tr/projeler/koklu-miras-anadolunun-sozlu-kulturunu-gelecege-tasiyan-belgesel-proje">
-                <div class="card__img" style="--img:url('assets/img/project/koklu-miras.webp')"></div>
-                <div class="card__body"><span class="card__cat">Sosyal Sorumluluk</span><h3 class="card__title">Köklü Miras | Anadolu’nun Sözlü Kültürünü Geleceğe Taşıyan Belgesel</h3></div>
-              </a>
-              <a class="card" href="https://yasinyavuz.com.tr/projeler/selatin-camilerde-dijital-duyuru-pano-uygulamasi">
-                <div class="card__img" style="--img:url('assets/img/project/selatin.webp')"></div>
-                <div class="card__body"><span class="card__cat">Kurumsal &amp; Yerel</span><h3 class="card__title">Selatin Camilerde Dijital Duyuru Pano Uygulaması</h3></div>
-              </a>
-            </div>
-          </div>
-          <div class="strip__nav">
-            <button class="strip__arrow" data-dir="prev" aria-label="Önceki projeler"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
-            <div class="strip__dots" role="tablist" aria-label="Sayfalar"></div>
-            <button class="strip__arrow" data-dir="next" aria-label="Sonraki projeler"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ MEDYA ŞERİDİ (numankurtulmus tekrarlı desen — brief §5.5) ============ -->
-    <section class="section band-paper" id="medya">
+    <!-- ============ MEDYA / HABERLER ŞERİDİ (özgeçmişten hemen sonra — brief §5.5) ============ -->
+    <section class="section band-sunk" id="medya">
       <div class="container">
         <div class="head reveal">
           <h2 class="head__title">Basında ve Gündemde</h2>
@@ -195,6 +156,44 @@
       </div>
     </section>
 
+    <!-- ============ PROJELER ŞERİDİ (numankurtulmus tekrarlı desen — brief §5.4) ============ -->
+    <section class="section band-paper" id="projeler">
+      <div class="container">
+        <div class="head reveal">
+          <h2 class="head__title">Öne Çıkan Projeler</h2>
+          <a class="arrow-link" href="https://yasinyavuz.com.tr/projeler/sosyal-sorumluluk">Tüm projeler <span class="ar" aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="strip reveal" data-d="1" data-strip>
+          <div class="strip__viewport">
+            <div class="strip__track">
+              <a class="card" href="https://yasinyavuz.com.tr/projeler/caykara-bagimlilikla-mucadele-ve-onleyici-farkindalik-programi">
+                <div class="card__img" style="--img:url('assets/img/project/caykara.webp')"></div>
+                <div class="card__body"><span class="card__cat">Sosyal Sorumluluk</span><h3 class="card__title">Çaykara Bağımlılıkla Mücadele ve Önleyici Farkındalık Programı</h3></div>
+              </a>
+              <a class="card" href="https://yasinyavuz.com.tr/projeler/dijital-kultur-koprusu-bosna-hersek-gencler-icin-dijital-kulturel-miras-projesi">
+                <div class="card__img" style="--img:url('assets/img/project/bosna.webp')"></div>
+                <div class="card__body"><span class="card__cat">Sosyal Sorumluluk</span><h3 class="card__title">Dijital Kültür Köprüsü – Bosna Hersek | Gençler İçin Dijital Kültürel Miras</h3></div>
+              </a>
+              <a class="card" href="https://yasinyavuz.com.tr/projeler/koklu-miras-anadolunun-sozlu-kulturunu-gelecege-tasiyan-belgesel-proje">
+                <div class="card__img" style="--img:url('assets/img/project/koklu-miras.webp')"></div>
+                <div class="card__body"><span class="card__cat">Sosyal Sorumluluk</span><h3 class="card__title">Köklü Miras | Anadolu’nun Sözlü Kültürünü Geleceğe Taşıyan Belgesel</h3></div>
+              </a>
+              <a class="card" href="https://yasinyavuz.com.tr/projeler/selatin-camilerde-dijital-duyuru-pano-uygulamasi">
+                <div class="card__img" style="--img:url('assets/img/project/selatin.webp')"></div>
+                <div class="card__body"><span class="card__cat">Kurumsal &amp; Yerel</span><h3 class="card__title">Selatin Camilerde Dijital Duyuru Pano Uygulaması</h3></div>
+              </a>
+            </div>
+          </div>
+          <div class="strip__nav">
+            <button class="strip__arrow" data-dir="prev" aria-label="Önceki projeler"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+            <div class="strip__dots" role="tablist" aria-label="Sayfalar"></div>
+            <button class="strip__arrow" data-dir="next" aria-label="Sonraki projeler"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ YAYINLAR (brief §5.6 / §11) — tek pencere slider. Tez gerçek (bio'dan); Kitap/Makale admin panelde → "Yakında" (SORULACAK) ============ -->
     <section class="section band-sunk" id="yayinlar">
       <div class="container">
@@ -217,7 +216,6 @@
                   <span class="pubslide__label">Kitaplar</span>
                   <h3 class="pubslide__title">Kitap çalışmaları</h3>
                   <p class="pubslide__desc">Düşünsel ve mesleki üretimler kitaplaşma sürecinde. Bu alan yakında Yasin Yavuz’un kitap çalışmalarıyla güncellenecek.</p>
-                  <span class="pubslide__tag">Yakında</span>
                 </div>
               </article>
               <!-- Makaleler — gerçek liste YOK (admin panel) → nötr "Yakında", SORULACAK -->
@@ -230,7 +228,6 @@
                   <span class="pubslide__label">Makaleler</span>
                   <h3 class="pubslide__title">Makale arşivi</h3>
                   <p class="pubslide__desc">Marka, iletişim ve dijital dönüşüm üzerine yazılar bu bölümde toplanacak. Makale arşivi hazırlanıyor.</p>
-                  <span class="pubslide__tag">Yakında</span>
                 </div>
               </article>
               <!-- Tez — GERÇEK (live-content Öz Geçmiş: Bahçeşehir YL tezi konusu) -->
