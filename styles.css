@@ -185,7 +185,7 @@ main [id] { scroll-margin-top: 124px; }
 .strip { position: relative; }
 .strip__viewport { overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -ms-overflow-style: none; margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter); }
 .strip__viewport::-webkit-scrollbar { display: none; }
-.strip__track { display: flex; gap: var(--sp-3); }
+.strip__track { display: flex; align-items: stretch; gap: var(--sp-3); }
 .strip__track > * { scroll-snap-align: start; flex: 0 0 calc((100% - 2 * var(--sp-3)) / 3); }
 
 .strip__nav { display: flex; align-items: center; justify-content: center; gap: var(--sp-3); margin-top: var(--sp-4); }
@@ -201,7 +201,7 @@ main [id] { scroll-margin-top: 124px; }
 .strip__arrow svg { width: 18px; height: 18px; }
 
 /* Kart — proje/haber (görsel üst + başlık + meta) */
-.card { display: flex; flex-direction: column; min-width: 0; background: var(--paper); border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; height: 100%; transition: border-color var(--dur-fast) var(--ease), box-shadow var(--dur) var(--ease), transform var(--dur-fast) var(--ease); }
+.card { display: flex; flex-direction: column; min-width: 0; background: var(--paper); border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; transition: border-color var(--dur-fast) var(--ease), box-shadow var(--dur) var(--ease), transform var(--dur-fast) var(--ease); }
 .card__img { aspect-ratio: 16 / 9; background: var(--paper-sunk) center / cover no-repeat; background-image: var(--img); overflow: hidden; }
 .card__body { display: flex; flex-direction: column; gap: .5em; padding: var(--sp-3); flex: 1; min-width: 0; }
 .card__cat { font-size: var(--fs-xs); font-weight: var(--w-bold); letter-spacing: .07em; text-transform: uppercase; color: var(--ink-500); }
