@@ -200,7 +200,11 @@
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const mast = document.getElementById('mast');
-    const onScroll = () => mast.classList.toggle('is-stuck', window.scrollY > 12);
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (y > 64) mast.classList.add('is-stuck');
+      else if (y < 32) mast.classList.remove('is-stuck');
+    };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
 
