@@ -68,8 +68,8 @@
         <div class="hero__identity" role="img" aria-label="Yasin Yavuz portresi">
           <div class="hero__sig">
             <div class="hero__rule" aria-hidden="true"></div>
-            <p class="hero__eyebrow">Girişimci · Proje Yöneticisi · İletişimci</p>
             <h1 class="hero__name">Yasin Yavuz</h1>
+            <p class="hero__eyebrow">Girişimci · Proje Yöneticisi · İletişimci</p>
           </div>
         </div>
 
@@ -319,7 +319,11 @@
 
     // Yapışkan header: scroll'da kompakt + gölge
     const mast = document.getElementById('mast');
-    const onScroll = () => mast.classList.toggle('is-stuck', window.scrollY > 12);
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (y > 64) mast.classList.add('is-stuck');
+      else if (y < 32) mast.classList.remove('is-stuck');
+    };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
 
