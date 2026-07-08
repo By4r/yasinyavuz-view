@@ -539,3 +539,43 @@ main [id] { scroll-margin-top: 124px; }
   .cv__panels { position: static; }
   .cv__portrait { max-width: 280px; }
 }
+
+/* ============================================================
+   CANLI REVİZE (2026-07-08): İletişim tek kolon ortalı (form üstte,
+   sosyal medya altta) + KVKK/Çerez onay bandı.
+   ============================================================ */
+
+/* — İletişim: tek kolon ortalı; form üstte, iletişim/sosyal altta (Beyar revizesi) — */
+.contact-stack { max-width: 640px; margin-inline: auto; display: grid; gap: clamp(2rem, 1.2rem + 2.5vw, 3rem); }
+.contact-stack .contact-aside { align-items: center; text-align: center; gap: var(--sp-3); padding-top: var(--sp-4); border-top: 1px solid var(--line); }
+.contact-stack .contact-row { justify-content: center; }
+.contact-stack .contact-social-group { display: flex; flex-direction: column; align-items: center; gap: var(--sp-2); }
+.contact-stack .contact-social { justify-content: center; }
+.contact-stack .form__actions { justify-content: flex-start; }
+
+/* — Çerez / KVKK onay bandı (buildless, cookie-consent.js ile enjekte edilir) — */
+.cookie-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 120; background: var(--paper); border-top: 1px solid var(--line); box-shadow: 0 -8px 30px rgba(15,15,15,.10); transform: translateY(100%); transition: transform var(--dur) var(--ease-out), opacity var(--dur) var(--ease-out); }
+.cookie-bar.is-in { transform: none; }
+.cookie-bar.is-hiding { transform: translateY(100%); opacity: 0; }
+.cookie-bar__inner { display: flex; align-items: center; gap: clamp(1rem, .6rem + 2vw, 2.5rem); padding-block: var(--sp-3); }
+.cookie-bar__text { flex: 1 1 auto; margin: 0; font-size: var(--fs-sm); line-height: var(--lh-body); color: var(--ink-700); }
+.cookie-bar__text a { color: var(--ink-900); font-weight: var(--w-semi); text-decoration: underline; text-underline-offset: 2px; }
+.cookie-bar__actions { flex: none; display: flex; gap: var(--sp-2); }
+.cookie-bar__actions .btn { padding-block: .7em; white-space: nowrap; }
+@media (max-width: 720px) {
+  .cookie-bar__inner { flex-direction: column; align-items: stretch; gap: var(--sp-2); }
+  .cookie-bar__actions .btn { flex: 1 1 0; }
+}
+
+/* — Yasal sayfalar (KVKK / Aydınlatma / Çerez): metin tipografisi — */
+.legal-prose { max-width: var(--maxw-text); margin-inline: auto; }
+/* Metin ortalı (dar+ortalı kolon) + justify; TR uzun kelimelerde boşluğu tireleme çözer (lang="tr") */
+.legal-prose > p, .legal-prose li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; }
+.legal-prose .legal-updated { text-align: left; }
+.legal-prose h2 { font-size: var(--fs-h3); font-weight: var(--w-bold); letter-spacing: -.01em; line-height: 1.25; margin: var(--sp-5) 0 var(--sp-2); color: var(--ink-900); }
+.legal-prose h2:first-child { margin-top: 0; }
+.legal-prose ul { margin: 0 0 var(--sp-3); padding-left: 1.25em; display: grid; gap: .45em; }
+.legal-prose li { color: var(--ink-700); font-size: var(--fs-body); line-height: var(--lh-body); }
+.legal-prose li strong { color: var(--ink-900); font-weight: var(--w-semi); }
+.legal-prose a { color: var(--ink-900); font-weight: var(--w-semi); text-decoration: underline; text-underline-offset: 2px; }
+.legal-prose .legal-updated { font-size: var(--fs-sm); color: var(--ink-500); font-weight: var(--w-semi); }
