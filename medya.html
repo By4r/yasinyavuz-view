@@ -69,14 +69,16 @@
       </div>
     </section>
 
-    <!-- ============ HABERLER (index.html #medya şeridiyle birebir aynı 6 kart) ============ -->
-    <section class="section band-paper">
+    <!-- ============ MEDYA — sekmeli (Haberler / Basında); her sekme kendi içinde sayfalanır ============ -->
+    <section class="section band-sunk">
       <div class="container">
-        <div class="head reveal">
-          <h2 class="head__title">Haberler</h2>
+        <div class="tabs reveal" role="tablist" aria-label="Medya kategorileri">
+          <button class="tab is-active" id="tabbtn-haberler" role="tab" aria-selected="true" aria-controls="panel-haberler" type="button">Haberler</button>
+          <button class="tab" id="tabbtn-basinda" role="tab" aria-selected="false" aria-controls="panel-basinda" type="button">Basında</button>
         </div>
 
-        <div class="card-grid reveal">
+        <div class="tabpanel" id="panel-haberler" role="tabpanel" aria-labelledby="tabbtn-haberler" data-pager data-per="6">
+        <div class="card-grid pager__items">
           <a class="card" href="haber-caykaraspor-plaket.html">
             <div class="card__img" style="--img:url('assets/img/news/caykaraspor-plaket.webp')"></div>
             <div class="card__body"><h3 class="card__title">Çaykaraspor’un 40. Yıl Vefa Gecesinde Yasin Yavuz’a Plaket</h3><span class="card__date">12.02.2026</span></div>
@@ -102,18 +104,11 @@
             <div class="card__body"><h3 class="card__title">Vefa Gecesinde Tarih ve Teknoloji Buluştu: “1918: Kurtuluş” Kısa Filmi</h3><span class="card__date">04.11.2025</span></div>
           </a>
         </div>
-      </div>
-    </section>
-
-    <!-- ============ BASINDA (dış basın linkleri — brief-assets.md §C, tam liste) ============ -->
-    <section class="section band-sunk">
-      <div class="container">
-        <div class="head reveal">
-          <h2 class="head__title">Basında</h2>
-          <p class="head__kicker">Ulusal ve yerel basında yer alan haberler.</p>
+        <nav class="pager__nav" aria-label="Haberler sayfaları" hidden></nav>
         </div>
 
-        <div class="press-list reveal">
+        <div class="tabpanel" id="panel-basinda" role="tabpanel" aria-labelledby="tabbtn-basinda" data-pager data-per="12" hidden>
+        <div class="press-list pager__items">
           <a class="press-item" href="https://www.msn.com/tr-tr/spor/other/çaykaralı-iş-insanı-yasin-yavuz-dan-40-yıl-vefa-gecesi-ne-destek/ar-AA1Wd73N" target="_blank" rel="noopener">
             <span class="press-item__name">MSN Türkiye</span>
             <span class="press-item__ext" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
@@ -235,6 +230,8 @@
             <span class="press-item__ext" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
           </a>
         </div>
+        <nav class="pager__nav" aria-label="Basında sayfaları" hidden></nav>
+        </div>
       </div>
     </section>
 
@@ -262,7 +259,11 @@
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const mast = document.getElementById('mast');
-    const onScroll = () => mast.classList.toggle('is-stuck', window.scrollY > 12);
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (y > 64) mast.classList.add('is-stuck');
+      else if (y < 32) mast.classList.remove('is-stuck');
+    };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
 
@@ -334,6 +335,70 @@
       window.addEventListener('resize', buildDots, { passive: true });
       buildDots();
     });
+
+    // Sekme + sayfalama (buildless). Her [data-pager] panelini data-per'e göre sayfalar.
+    const PREV_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>';
+    const NEXT_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>';
+
+    document.querySelectorAll('[data-pager]').forEach(panel => {
+      const per = Math.max(1, parseInt(panel.getAttribute('data-per'), 10) || 9);
+      const wrap = panel.querySelector('.pager__items');
+      const nav = panel.querySelector('.pager__nav');
+      const cells = [...wrap.children];
+      const pageCount = Math.ceil(cells.length / per);
+      let current = 0;
+
+      const scrollToPanel = () => {
+        const top = panel.getBoundingClientRect().top + window.scrollY - 96;
+        window.scrollTo({ top, behavior: reduce ? 'auto' : 'smooth' });
+      };
+
+      const render = () => {
+        cells.forEach((el, i) => { el.hidden = !(i >= current * per && i < (current + 1) * per); });
+        if (pageCount <= 1) { nav.hidden = true; nav.innerHTML = ''; return; }
+        nav.hidden = false;
+        nav.innerHTML = '';
+        const mk = (page, { label, svg, disabled, active, aria } = {}) => {
+          const b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'pager__btn' + (active ? ' is-active' : '');
+          if (svg) b.innerHTML = svg; else b.textContent = label;
+          if (disabled) b.disabled = true;
+          if (aria) b.setAttribute('aria-label', aria);
+          if (active) b.setAttribute('aria-current', 'page');
+          if (!disabled && !active) b.addEventListener('click', () => { current = page; render(); scrollToPanel(); });
+          nav.appendChild(b);
+        };
+        mk(current - 1, { svg: PREV_SVG, disabled: current === 0, aria: 'Önceki sayfa' });
+        for (let p = 0; p < pageCount; p++) mk(p, { label: String(p + 1), active: p === current, aria: (p + 1) + '. sayfa' });
+        mk(current + 1, { svg: NEXT_SVG, disabled: current === pageCount - 1, aria: 'Sonraki sayfa' });
+      };
+      render();
+    });
+
+    const tablist = document.querySelector('.tabs');
+    if (tablist) {
+      const tabs = [...tablist.querySelectorAll('.tab')];
+      const activate = tab => {
+        tabs.forEach(t => {
+          const on = t === tab;
+          t.classList.toggle('is-active', on);
+          t.setAttribute('aria-selected', on ? 'true' : 'false');
+          t.tabIndex = on ? 0 : -1;
+          const panel = document.getElementById(t.getAttribute('aria-controls'));
+          if (panel) panel.hidden = !on;
+        });
+      };
+      tablist.addEventListener('click', e => { const t = e.target.closest('.tab'); if (t) activate(t); });
+      tablist.addEventListener('keydown', e => {
+        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+        const i = tabs.indexOf(document.activeElement);
+        if (i < 0) return;
+        e.preventDefault();
+        const n = e.key === 'ArrowRight' ? (i + 1) % tabs.length : (i - 1 + tabs.length) % tabs.length;
+        tabs[n].focus(); activate(tabs[n]);
+      });
+    }
 
     const items = document.querySelectorAll('.reveal');
     if (!reduce && 'IntersectionObserver' in window) {
